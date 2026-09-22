@@ -1,0 +1,64 @@
+name: Dokploy Auto-Deploy IMR Impressão
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  dokploy-deploy:
+    name: Disparar Webhook do Dokploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar Código do Repositório
+        uses: actions/checkout@v4
+
+      - name: Acionar Auto-Deploy no Dokploy
+        env:
+          DOKPLOY_WEBHOOK: ${{ secrets.DOKPLOY_WEBHOOK_URL }}
+        run: |
+          echo "=========================================================="
+          echo "🚀 IMR IMPRESSÃO 3D - PIPELINE DE AUTO-DEPLOY NO DOKPLOY"
+          echo "=========================================================="
+          
+          if [ -z "$DOKPLOY_WEBHOOK" ]; then
+            echo ""
+            echo "⚠️  AVISO DE CONFIGURAÇÃO:"
+            echo "A Secret 'DOKPLOY_WEBHOOK_URL' ainda não foi configurada neste repositório."
+            echo ""
+            echo "👉 Para ativar o auto-deploy com 1 clique no Dokploy:"
+            echo "   1. Acesse seu painel Dokploy -> Projeto IMR -> Aplicação imr-catalogo"
+            echo "   2. Vá na aba 'Deployments' ou 'Auto Deploy' e copie a Webhook URL"
+            echo "   3. No GitHub, vá em: Settings -> Secrets and variables -> Actions"
+            echo "   4. Clique em 'New repository secret'"
+            echo "      - Nome: DOKPLOY_WEBHOOK_URL"
+            echo "      - Valor: (cole a URL copiada do Dokploy)"
+            echo ""
+            echo "💡 Alternativa nativa: Você também pode adicionar a URL diretamente em:"
+            echo "   GitHub -> Settings -> Webhooks -> Add Webhook (Content type: application/json)"
+            echo "=========================================================="
+            exit 0
+          fi
+
+          echo "Disparando webhook do Dokploy..."
+          HTTP_RESPONSE=$(curl -s -o response.txt -w "%{http_code}" -X POST "$DOKPLOY_WEBHOOK")
+
+          echo "Código de Retorno HTTP: $HTTP_RESPONSE"
+          echo "Resposta do Servidor:"
+          cat response.txt
+          echo ""
+
+          if [ "$HTTP_RESPONSE" -ge 200 ] && [ "$HTTP_RESPONSE" -lt 300 ]; then
+            echo "=========================================================="
+            echo "✅ [SUCESSO] Webhook disparado com sucesso no Dokploy!"
+            echo "O Dokploy iniciou a compilação do Docker e atualização do site."
+            echo "=========================================================="
+          else
+            echo "=========================================================="
+            echo "❌ [FALHA] Dokploy retornou código HTTP $HTTP_RESPONSE."
+            echo "Verifique se a VPS está online e se a URL do Webhook está correta."
+            echo "=========================================================="
+            exit 1
+          fi
