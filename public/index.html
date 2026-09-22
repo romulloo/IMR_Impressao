@@ -3,80 +3,221 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CATÁLOGO DE PRODUTOS • IMR IMPRESSÃO 3D</title>
-  <meta name="description" content="Catálogo oficial de soluções em manufatura aditiva 3D da IMR Impressão. Action Figures, Bonecos Personalizados, Chaveiros, Displays e Letreiros com preços unitários e atacado." />
-  <link rel="icon" type="image/png" href="assets/images/IMR_LOGO_TRANSPARENTE.png" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=3.0" />
+  <title>IMR IMPRESSÃO 3D • CATÁLOGO OFICIAL 2026</title>
+  <meta name="description" content="Catálogo oficial de manufatura aditiva 3D da IMR Impressão. Action Figures, Bonecos Personalizados, Displays PDV, Chaveiros B2B e Letreiros Luminosos com preços unitários e atacado direto de fábrica." />
+  <link rel="icon" type="image/png" href="assets/images/IMR_LOGO_DARK_THEME.png" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=4.0" />
 </head>
 <body>
 
-  <!-- Barra Superior Minimalista -->
-  <aside class="top-ticker" aria-label="Informações de atendimento">
+  <!-- 1. Top Announcement Bar (Estilo Puma Ticker) -->
+  <aside class="top-ticker" aria-label="Informações de Atendimento">
     <div class="container">
       <div class="ticker-inner">
         <div class="ticker-content">
           <span class="ticker-badge">FÁBRICA ATIVA</span>
-          <span>Bambu Lab A1 Multi-Cores • Curitiba - PR • Envio para Todo o Brasil</span>
+          <span>BAMBU LAB A1 MULTI-CORES • CAMADA 0.12MM • CURITIBA - PR • ENVIO BRASIL</span>
         </div>
         <div class="ticker-links">
           <a href="https://instagram.com/imr_impressao" target="_blank" rel="noopener">
-            @imr_impressao
+            @IMR_IMPRESSAO
           </a>
           <a href="https://wa.me/5541999273954?text=Ol%C3%A1%20IMR%20Impress%C3%A3o!%20Gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener">
-            WhatsApp (41) 99927-3954
+            WHATSAPP: (41) 99927-3954
           </a>
         </div>
       </div>
     </div>
   </aside>
 
-  <!-- Header Limpo Branco Minimalista Apple-Style -->
+  <!-- 2. Header & Navbar no Estilo Puma (Fundo Preto Sólido #000000 + Categorias + Busca em Pílula) -->
   <header class="site-header">
     <div class="container">
-      <div class="nav-container">
-        <a href="#" class="brand-logo" title="IMR Impressão 3D">
-          <img src="assets/images/IMR_LOGO_TRANSPARENTE.png" alt="Logo IMR Impressão" onerror="this.src='assets/images/imr_logo_light.png'" />
-          <div class="brand-titles">
-            <span class="brand-name">IMR IMPRESSÃO 3D</span>
-            <span class="brand-tagline">Catálogo Oficial B2B & Varejo</span>
-          </div>
+      <div class="puma-nav-container">
+        <!-- Logo IMR Oficial em Branco no Canto Esquerdo -->
+        <a href="#" class="puma-brand" title="IMR Impressão 3D - Início" onclick="resetFilters()">
+          <img 
+            src="assets/images/IMR_LOGO_DARK_THEME.png" 
+            alt="Logo Oficial IMR Impressão" 
+            class="puma-logo-img" 
+            onerror="this.src='assets/images/IMR_LOGO_TRANSPARENTE.png';" 
+          />
         </a>
 
-        <div class="nav-actions">
-          <a href="https://wa.me/5541999273954?text=Ol%C3%A1%20IMR%20Impress%C3%A3o!%20Gostaria%20de%20falar%20sobre%20um%20pedido%20do%20cat%C3%A1logo." target="_blank" rel="noopener" class="btn btn-primary">
-            Falar no WhatsApp
+        <!-- Categorias Centrais Puma em Tipografia Sans-Serif Bold Condensada Maiúscula -->
+        <nav class="puma-categories-nav" id="puma-nav-categories" aria-label="Categorias de Produtos">
+          <!-- Inserido dinamicamente via app.js com as categorias oficiais solicitadas:
+               COLECIONÁVEIS, DISPLAYS & PDV, CHAVEIROS & BRINDES, LETREIROS & LOGOS 3D,
+               CASES & TECH, COPOS & UTILIDADES, OUTLET / B2B ATACADO -->
+        </nav>
+
+        <!-- Lado Direito da Navbar Puma (Igualzinho ao print da Puma) -->
+        <div class="puma-nav-right">
+          <!-- Barra de Busca em Pílula Puma: Ícone de Lupa + Texto 'BUSCA' -->
+          <div class="puma-search-box" role="search">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input 
+              type="text" 
+              id="puma-search-input" 
+              class="puma-search-input" 
+              placeholder="BUSCA" 
+              aria-label="Buscar produtos no catálogo" 
+              autocomplete="off"
+            />
+            <button type="button" id="puma-search-clear" class="search-clear-btn" style="display: none;" title="Limpar busca">
+              ✕
+            </button>
+          </div>
+
+          <!-- Ícone de Coração (Favoritos) com Contador -->
+          <button 
+            type="button" 
+            class="puma-nav-btn" 
+            id="nav-wishlist-btn" 
+            title="Meus Favoritos" 
+            aria-label="Meus Favoritos"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+            <span class="puma-nav-badge" id="wishlist-badge" style="display: none;">0</span>
+          </button>
+
+          <!-- Ícone de Carrinho/Sacola de Orçamento com Contador -->
+          <button 
+            type="button" 
+            class="puma-nav-btn" 
+            id="nav-cart-btn" 
+            title="Sacola de Orçamento" 
+            aria-label="Sacola de Orçamento"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span class="puma-nav-badge" id="cart-badge" style="display: none;">0</span>
+          </button>
+
+          <!-- Ícone de Usuário / WhatsApp Comercial com Link Direto -->
+          <a 
+            href="https://wa.me/5541999273954?text=Ol%C3%A1%20IMR%20Impress%C3%A3o!%20Gostaria%20de%20um%20atendimento%20comercial%20para%20minha%20empresa." 
+            target="_blank" 
+            rel="noopener" 
+            class="puma-nav-btn" 
+            title="Atendimento Comercial IMR" 
+            aria-label="Atendimento Comercial WhatsApp"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
           </a>
+
+          <!-- Botão Toggle Menu Mobile -->
+          <button 
+            type="button" 
+            class="puma-mobile-btn" 
+            id="puma-mobile-toggle" 
+            aria-label="Abrir Menu Mobile"
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
         </div>
       </div>
     </div>
   </header>
 
+  <!-- Gaveta do Menu Mobile Puma -->
+  <div class="mobile-menu-backdrop" id="mobile-menu-backdrop"></div>
+  <aside class="mobile-menu-drawer" id="mobile-menu-drawer" aria-label="Menu Mobile">
+    <div class="mobile-menu-header">
+      <img src="assets/images/IMR_LOGO_DARK_THEME.png" alt="IMR Impressão" style="height: 32px; width: auto;" />
+      <button type="button" class="mobile-menu-close" id="mobile-menu-close" aria-label="Fechar Menu">✕</button>
+    </div>
+    <div class="mobile-menu-body" id="mobile-nav-categories">
+      <!-- Gerado via app.js -->
+    </div>
+    <div style="padding: 20px; border-top: 1px solid #222222; margin-top: auto;">
+      <a 
+        href="https://wa.me/5541999273954?text=Ol%C3%A1%20IMR%20Impress%C3%A3o!%20Gostaria%20de%20um%20or%C3%A7amento." 
+        target="_blank" 
+        rel="noopener" 
+        class="puma-btn-primary" 
+        style="width: 100%;"
+      >
+        Falar com Vendedor
+      </a>
+    </div>
+  </aside>
+
   <main>
-    <!-- Hero Minimalista Clean Apple-Style -->
-    <section class="hero-minimal">
+    <!-- 3. Hero Banner de Alto Impacto (Estilo Puma Suede Bloom / Never Not Suede) -->
+    <section class="puma-hero-banner" aria-label="Destaque da Coleção">
       <div class="container">
-        <div class="hero-header">
-          <span class="hero-pretitle">Manufatura Digital Bambu Lab</span>
-          <h1 class="hero-title">CATÁLOGO DE PRODUTOS • IMR IMPRESSÃO 3D</h1>
-          <p class="hero-subtitle">
-            Action figures colecionáveis, bonecos personalizados, chaveiros em escala B2B, displays de balcão e letreiros volumétricos. Peças com preços unitários prontos e tabela progressiva de atacado.
+        <div class="hero-puma-content">
+          <!-- Subtítulo / Tagline superior Puma -->
+          <span class="hero-puma-tagline">✦ MANUFATURA DIGITAL DE ALTA PRECISÃO</span>
+          
+          <!-- Título Principal de Impacto em Caixa Alta Condensada -->
+          <h1 class="hero-puma-title">COLEÇÃO IMR 3D 2026</h1>
+          
+          <!-- Descrição Refinada -->
+          <p class="hero-puma-desc">
+            Action figures hiperdetalhadas, bonecos personalizados sob encomenda, displays de balcão e chaveiros corporativos produzidos em escala com fusão multi-cores direta sem pintura manual.
           </p>
-          <div class="hero-quick-features">
-            <span>4 Cores Diretas sem Pintura Manual</span>
-            <span>Camada Fina 0.12mm</span>
-            <span>Atacado com até 75% OFF</span>
-            <span>Envio para Todo o Brasil</span>
+
+          <!-- Badges de Diferenciais -->
+          <div class="hero-puma-badges">
+            <span>BAMBU LAB MULTI-CORES</span>
+            <span>CAMADA ULTRA-FINA 0.12MM</span>
+            <span>ATÉ 75% OFF NO ATACADO</span>
+            <span>ENVIO DIRETO DE CURITIBA</span>
+          </div>
+
+          <!-- Botões de Ação Quadrados/Retangulares Clássicos da Puma -->
+          <div class="hero-puma-actions">
+            <a href="#catalogo" class="puma-btn-primary">
+              SOLICITAR ORÇAMENTO
+            </a>
+            <a 
+              href="https://wa.me/5541999273954?text=Ol%C3%A1%20IMR%20Impress%C3%A3o!%20Gostaria%20de%20receber%20uma%20cota%C3%A7%C3%A3o%20r%C3%A1pida%20de%20produtos%20do%20cat%C3%A1logo." 
+              target="_blank" 
+              rel="noopener" 
+              class="puma-btn-secondary"
+            >
+              FALAR NO WHATSAPP
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Catálogo de Produtos -->
+    <!-- 4. Seção do Catálogo & Grade de Produtos no Estilo Puma E-commerce -->
     <section class="catalog-section" id="catalogo">
       <div class="container">
         
-        <!-- Barra de Busca, Ordenação e Filtros Rápidos -->
+        <!-- Cabeçalho da Seção -->
+        <div class="catalog-section-header">
+          <h2 class="catalog-title">DESTAQUES & LANÇAMENTOS 2026</h2>
+          <p class="catalog-subtitle">SELECIONE UMA CATEGORIA OU BUSQUE POR SOLUÇÕES EM IMPRESSÃO 3D</p>
+        </div>
+
+        <!-- Controles: Pílulas de Categoria + Barra de Busca e Ordenação -->
         <div class="catalog-controls">
+          <!-- Pílulas de Categoria Minimalistas Retangulares Puma -->
+          <div class="category-pills-row" id="category-filters">
+            <!-- Gerado via products.js / app.js -->
+          </div>
+
+          <!-- Linha de Busca Adicional e Ordenação -->
           <div class="search-sort-bar">
             <div class="search-input-box">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -87,33 +228,29 @@
                 type="text" 
                 id="catalog-search-input" 
                 class="search-input" 
-                placeholder="Buscar por Action Figure, Boneco, Chaveiro, Placa Pix, Letreiro, Copo..." 
+                placeholder="Filtrar por nome, modelo, tag (ex: Miles Morales, Chaveiro, Placa Pix)..." 
               />
             </div>
 
             <div class="sort-select-box">
-              <label for="catalog-sort-select" class="sort-label">Ordenar:</label>
+              <label for="catalog-sort-select" class="sort-label">ORDENAR POR:</label>
               <select id="catalog-sort-select" class="sort-select">
                 <option value="popular">Destaques IMR</option>
-                <option value="price-asc">Menor Preço</option>
-                <option value="price-desc">Maior Preço</option>
+                <option value="discount-desc">Maior Desconto Atacado</option>
+                <option value="price-asc">Menor Preço Unitário</option>
+                <option value="price-desc">Maior Preço Unitário</option>
                 <option value="name-asc">Nome (A - Z)</option>
               </select>
             </div>
           </div>
 
-          <!-- Pílulas de Categoria Minimalistas -->
-          <div class="category-pills-row" id="category-filters">
-            <!-- Gerado via products.js / app.js -->
-          </div>
-
           <div class="catalog-meta-row">
-            <span id="results-count">Carregando produtos...</span>
-            <span>💡 Clique em <strong>Pedir no WhatsApp</strong> para encomendar diretamente com mensagem pré-formatada.</span>
+            <span id="results-count">Carregando catálogo...</span>
+            <span>✦ Clique em <strong>+ Adicionar ao Orçamento</strong> para somar itens ou <strong>Comprar no WhatsApp</strong> para pedido rápido.</span>
           </div>
         </div>
 
-        <!-- Grade de Produtos Responsiva -->
+        <!-- Grade de Produtos no Estilo Puma E-commerce (Cards Clean Runway) -->
         <div class="products-grid" id="products-grid">
           <!-- Inserido dinamicamente via app.js -->
         </div>
@@ -121,10 +258,65 @@
     </section>
   </main>
 
-  <!-- Modal Minimalista Clean Light para Detalhes Técnicos -->
+  <!-- 5. Banner Flutuante Inferior (Igual ao 'TENHA 15% OFF EM SUA PRIMEIRA COMPRA' do print da Puma) -->
+  <div class="puma-floating-banner" id="floating-b2b-banner" role="complementary" aria-label="Aviso Promocional Atacado B2B">
+    <span class="floating-banner-text" id="floating-banner-link" title="Clique para ver produtos com atacado">
+      ✦ ATACADO B2B: ATÉ 40% OFF EM PEDIDOS CORPORATIVOS
+    </span>
+    <button type="button" class="floating-banner-close" id="close-floating-banner" aria-label="Fechar aviso">
+      ✕
+    </button>
+  </div>
+
+  <!-- 6. Gaveta da Sacola de Orçamento (Slide-in Drawer) -->
+  <div class="cart-drawer-backdrop" id="cart-drawer-backdrop"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Sacola de Orçamento">
+    <div class="cart-drawer-header">
+      <span class="cart-drawer-title">SACOLA DE ORÇAMENTO <span id="cart-total-count">(0)</span></span>
+      <button type="button" class="cart-drawer-close" id="cart-drawer-close" aria-label="Fechar Sacola">✕</button>
+    </div>
+
+    <div class="cart-drawer-body">
+      <div id="cart-empty-state" class="cart-empty-state">
+        <h4>Sua sacola está vazia</h4>
+        <p>Adicione modelos colecionáveis, chaveiros ou displays clicando em <strong>+ Adicionar ao Orçamento</strong> nos cards.</p>
+      </div>
+
+      <div id="cart-items-list">
+        <!-- Renderizado dinamicamente via app.js -->
+      </div>
+    </div>
+
+    <div class="cart-drawer-footer" id="cart-drawer-footer" style="display: none;">
+      <div class="cart-summary-row">
+        <span class="cart-summary-label">Subtotal dos Itens:</span>
+        <span class="cart-summary-val" id="cart-subtotal-val">R$ 0,00</span>
+      </div>
+      <div class="cart-summary-row cart-savings-row" id="cart-savings-row" style="display: none;">
+        <span>Desconto Atacado IMR:</span>
+        <span id="cart-savings-val">- R$ 0,00</span>
+      </div>
+      <div class="cart-total-row">
+        <span class="cart-total-label">VALOR ESTIMADO:</span>
+        <span class="cart-total-val" id="cart-subtotal-val">R$ 0,00</span>
+      </div>
+
+      <a 
+        href="#" 
+        id="cart-whatsapp-checkout" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="cart-whatsapp-cta"
+      >
+        ENVIAR ORÇAMENTO NO WHATSAPP
+      </a>
+    </div>
+  </aside>
+
+  <!-- 7. Modal de Detalhes Técnicos & Tabela B2B -->
   <div class="modal-overlay" id="details-modal" aria-hidden="true">
     <div class="modal-container" role="dialog" aria-modal="true">
-      <button type="button" class="modal-close-btn" id="details-close-btn" aria-label="Fechar">
+      <button type="button" class="modal-close-btn" id="details-close-btn" aria-label="Fechar Detalhes">
         ✕
       </button>
 
@@ -141,7 +333,7 @@
               <span class="spec-value" id="modal-spec-dims">-</span>
             </div>
             <div class="spec-item">
-              <span class="spec-label">Prazo Produção:</span>
+              <span class="spec-label">Prazo de Produção:</span>
               <span class="spec-value" id="modal-spec-lead">-</span>
             </div>
             <div class="spec-item">
@@ -149,7 +341,7 @@
               <span class="spec-value" id="modal-spec-weight">-</span>
             </div>
             <div class="spec-item">
-              <span class="spec-label">Material:</span>
+              <span class="spec-label">Tecnologia & Material:</span>
               <span class="spec-value" id="modal-spec-mat">-</span>
             </div>
           </div>
@@ -165,20 +357,20 @@
           <p class="modal-desc" id="modal-desc">-</p>
 
           <!-- Preços Prontos no Modal -->
-          <div class="pricing-block-ready">
-            <div class="price-unit-row">
-              <span class="price-unit-label">Preço Unitário Padrão:</span>
-              <div class="price-unit-val" id="modal-price-unit">R$ 0,00</div>
+          <div class="puma-pricing-block" style="margin-bottom: 4px;">
+            <div class="puma-price-row">
+              <span class="puma-price-label">Preço Unitário Padrão:</span>
+              <span class="puma-price-val" id="modal-price-unit">R$ 0,00</span>
             </div>
-            <div class="price-wholesale-row">
-              <span class="wholesale-tag-label">Melhor Preço Atacado:</span>
-              <span class="wholesale-tag-val" id="modal-price-wholesale">Consulte</span>
+            <div class="puma-wholesale-row">
+              <span class="puma-wholesale-label">Melhor Preço Atacado:</span>
+              <span class="puma-wholesale-val" id="modal-price-wholesale">Consulte</span>
             </div>
           </div>
 
           <!-- Tabela de Faixas B2B -->
           <div>
-            <span class="spec-label" style="display: block; margin-bottom: 6px;">Tabela de Descontos por Lote:</span>
+            <span class="spec-label" style="display: block; margin-bottom: 6px;">Tabela Progressiva por Lote:</span>
             <div class="tiers-table-wrap">
               <table class="tiers-table">
                 <thead>
@@ -195,39 +387,56 @@
             </div>
           </div>
 
-          <!-- Vantagens -->
+          <!-- Diferenciais -->
           <div>
-            <span class="spec-label" style="display: block; margin-bottom: 6px;">Diferenciais de Fabricação:</span>
+            <span class="spec-label" style="display: block; margin-bottom: 6px;">Diferenciais Bambu Lab IMR:</span>
             <ul class="benefits-list" id="modal-benefits-list"></ul>
           </div>
 
-          <!-- Ação Direta WhatsApp -->
-          <a href="#" id="modal-whatsapp-cta" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%; padding: 14px; font-size: 0.95rem;">
-            Pedir no WhatsApp com Valores Acima
-          </a>
+          <!-- Ações do Modal -->
+          <div class="modal-actions-box">
+            <button type="button" id="modal-add-cart-cta" class="puma-btn-primary">
+              + Adicionar à Sacola
+            </button>
+            <a 
+              href="#" 
+              id="modal-whatsapp-cta" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="puma-btn-secondary" 
+              style="color: #000000; border-color: #000000;"
+            >
+              Pedir no WhatsApp
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Rodapé Minimalista Clean Light -->
+  <!-- 8. Rodapé Puma Style (Fundo Preto Sólido + Tipografia Condensada) -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-inner">
         <div class="footer-brand-info">
           <span class="footer-brand-title">IMR IMPRESSÃO 3D</span>
-          <span class="footer-brand-sub">Manufatura Digital em Bambu Lab A1 Multi-Cores • Curitiba - PR</span>
+          <span class="footer-brand-sub">Fábrica Especializada em Manufatura Aditiva de Alta Definição • Bambu Lab A1 Multi-Cores • Curitiba - PR</span>
         </div>
         <div class="footer-links">
           <a href="https://wa.me/5541999273954" target="_blank" rel="noopener">WhatsApp: (41) 99927-3954</a>
           <a href="https://instagram.com/imr_impressao" target="_blank" rel="noopener">Instagram: @imr_impressao</a>
+          <a href="#catalogo">Catálogo Completo</a>
         </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 IMR Impressão 3D. Todos os direitos reservados. Design inspirado no visual minimalista e-commerce esportivo Puma.</span>
+        <span>Pronto para Deploy Dokploy / GitHub Actions.</span>
       </div>
     </div>
   </footer>
 
   <!-- Scripts -->
-  <script src="assets/js/products.js?v=3.0"></script>
-  <script src="assets/js/app.js?v=3.0"></script>
+  <script src="assets/js/products.js?v=4.0"></script>
+  <script src="assets/js/app.js?v=4.0"></script>
 </body>
 </html>
