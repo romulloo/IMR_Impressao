@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CATÁLOGO DE PRODUTOS • IMR IMPRESSÃO 3D</title>
+  <meta name="description" content="Catálogo oficial de soluções em manufatura aditiva 3D da IMR Impressão. Action Figures, Bonecos Personalizados, Chaveiros, Displays e Letreiros com preços unitários e atacado." />
+  <link rel="icon" type="image/png" href="assets/images/IMR_LOGO_TRANSPARENTE.png" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=3.0" />
+</head>
+<body>
+
+  <!-- Barra Superior Minimalista -->
+  <aside class="top-ticker" aria-label="Informações de atendimento">
+    <div class="container">
+      <div class="ticker-inner">
+        <div class="ticker-content">
+          <span class="ticker-badge">FÁBRICA ATIVA</span>
+          <span>Bambu Lab A1 Multi-Cores • Curitiba - PR • Envio para Todo o Brasil</span>
+        </div>
+        <div class="ticker-links">
+          <a href="https://instagram.com/imr_impressao" target="_blank" rel="noopener">
+            @imr_impressao
+          </a>
+          <a href="https://wa.me/5541999273954?text=Ol%C3%A1%20IMR%20Impress%C3%A3o!%20Gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener">
+            WhatsApp (41) 99927-3954
+          </a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Header Limpo Branco Minimalista Apple-Style -->
+  <header class="site-header">
+    <div class="container">
+      <div class="nav-container">
+        <a href="#" class="brand-logo" title="IMR Impressão 3D">
+          <img src="assets/images/IMR_LOGO_TRANSPARENTE.png" alt="Logo IMR Impressão" onerror="this.src='assets/images/imr_logo_light.png'" />
+          <div class="brand-titles">
+            <span class="brand-name">IMR IMPRESSÃO 3D</span>
+            <span class="brand-tagline">Catálogo Oficial B2B & Varejo</span>
+          </div>
+        </a>
+
+        <div class="nav-actions">
+          <a href="https://wa.me/5541999273954?text=Ol%C3%A1%20IMR%20Impress%C3%A3o!%20Gostaria%20de%20falar%20sobre%20um%20pedido%20do%20cat%C3%A1logo." target="_blank" rel="noopener" class="btn btn-primary">
+            Falar no WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Minimalista Clean Apple-Style -->
+    <section class="hero-minimal">
+      <div class="container">
+        <div class="hero-header">
+          <span class="hero-pretitle">Manufatura Digital Bambu Lab</span>
+          <h1 class="hero-title">CATÁLOGO DE PRODUTOS • IMR IMPRESSÃO 3D</h1>
+          <p class="hero-subtitle">
+            Action figures colecionáveis, bonecos personalizados, chaveiros em escala B2B, displays de balcão e letreiros volumétricos. Peças com preços unitários prontos e tabela progressiva de atacado.
+          </p>
+          <div class="hero-quick-features">
+            <span>4 Cores Diretas sem Pintura Manual</span>
+            <span>Camada Fina 0.12mm</span>
+            <span>Atacado com até 75% OFF</span>
+            <span>Envio para Todo o Brasil</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catálogo de Produtos -->
+    <section class="catalog-section" id="catalogo">
+      <div class="container">
+        
+        <!-- Barra de Busca, Ordenação e Filtros Rápidos -->
+        <div class="catalog-controls">
+          <div class="search-sort-bar">
+            <div class="search-input-box">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input 
+                type="text" 
+                id="catalog-search-input" 
+                class="search-input" 
+                placeholder="Buscar por Action Figure, Boneco, Chaveiro, Placa Pix, Letreiro, Copo..." 
+              />
+            </div>
+
+            <div class="sort-select-box">
+              <label for="catalog-sort-select" class="sort-label">Ordenar:</label>
+              <select id="catalog-sort-select" class="sort-select">
+                <option value="popular">Destaques IMR</option>
+                <option value="price-asc">Menor Preço</option>
+                <option value="price-desc">Maior Preço</option>
+                <option value="name-asc">Nome (A - Z)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Pílulas de Categoria Minimalistas -->
+          <div class="category-pills-row" id="category-filters">
+            <!-- Gerado via products.js / app.js -->
+          </div>
+
+          <div class="catalog-meta-row">
+            <span id="results-count">Carregando produtos...</span>
+            <span>💡 Clique em <strong>Pedir no WhatsApp</strong> para encomendar diretamente com mensagem pré-formatada.</span>
+          </div>
+        </div>
+
+        <!-- Grade de Produtos Responsiva -->
+        <div class="products-grid" id="products-grid">
+          <!-- Inserido dinamicamente via app.js -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal Minimalista Clean Light para Detalhes Técnicos -->
+  <div class="modal-overlay" id="details-modal" aria-hidden="true">
+    <div class="modal-container" role="dialog" aria-modal="true">
+      <button type="button" class="modal-close-btn" id="details-close-btn" aria-label="Fechar">
+        ✕
+      </button>
+
+      <div class="modal-grid">
+        <!-- Coluna Esquerda: Imagem & Ficha Técnica -->
+        <div>
+          <div class="modal-main-img-box">
+            <img id="modal-img" src="" alt="Produto IMR" />
+          </div>
+
+          <div class="specs-table">
+            <div class="spec-item">
+              <span class="spec-label">Dimensões:</span>
+              <span class="spec-value" id="modal-spec-dims">-</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Prazo Produção:</span>
+              <span class="spec-value" id="modal-spec-lead">-</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Peso Estimado:</span>
+              <span class="spec-value" id="modal-spec-weight">-</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Material:</span>
+              <span class="spec-value" id="modal-spec-mat">-</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coluna Direita: Informações, Preços e Tabela de Atacado -->
+        <div class="modal-info">
+          <div>
+            <h2 class="modal-title" id="modal-title">-</h2>
+            <div class="modal-subtitle" id="modal-subtitle">-</div>
+          </div>
+
+          <p class="modal-desc" id="modal-desc">-</p>
+
+          <!-- Preços Prontos no Modal -->
+          <div class="pricing-block-ready">
+            <div class="price-unit-row">
+              <span class="price-unit-label">Preço Unitário Padrão:</span>
+              <div class="price-unit-val" id="modal-price-unit">R$ 0,00</div>
+            </div>
+            <div class="price-wholesale-row">
+              <span class="wholesale-tag-label">Melhor Preço Atacado:</span>
+              <span class="wholesale-tag-val" id="modal-price-wholesale">Consulte</span>
+            </div>
+          </div>
+
+          <!-- Tabela de Faixas B2B -->
+          <div>
+            <span class="spec-label" style="display: block; margin-bottom: 6px;">Tabela de Descontos por Lote:</span>
+            <div class="tiers-table-wrap">
+              <table class="tiers-table">
+                <thead>
+                  <tr>
+                    <th>Quantidade</th>
+                    <th>Condição</th>
+                    <th>Preço Unitário</th>
+                  </tr>
+                </thead>
+                <tbody id="modal-tiers-body">
+                  <!-- Gerado via app.js -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Vantagens -->
+          <div>
+            <span class="spec-label" style="display: block; margin-bottom: 6px;">Diferenciais de Fabricação:</span>
+            <ul class="benefits-list" id="modal-benefits-list"></ul>
+          </div>
+
+          <!-- Ação Direta WhatsApp -->
+          <a href="#" id="modal-whatsapp-cta" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%; padding: 14px; font-size: 0.95rem;">
+            Pedir no WhatsApp com Valores Acima
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rodapé Minimalista Clean Light -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand-info">
+          <span class="footer-brand-title">IMR IMPRESSÃO 3D</span>
+          <span class="footer-brand-sub">Manufatura Digital em Bambu Lab A1 Multi-Cores • Curitiba - PR</span>
+        </div>
+        <div class="footer-links">
+          <a href="https://wa.me/5541999273954" target="_blank" rel="noopener">WhatsApp: (41) 99927-3954</a>
+          <a href="https://instagram.com/imr_impressao" target="_blank" rel="noopener">Instagram: @imr_impressao</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/products.js?v=3.0"></script>
+  <script src="assets/js/app.js?v=3.0"></script>
+</body>
+</html>

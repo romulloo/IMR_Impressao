@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  imr-catalogo:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: imr-catalogo
+    restart: unless-stopped
+    ports:
+      - '3000:3000'
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - PYTHON_PATH=python3
+    volumes:
+      - uploads_data:/app/uploads
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:3000/api/health || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+volumes:
+  uploads_data:
+    name: imr_catalogo_uploads_data
