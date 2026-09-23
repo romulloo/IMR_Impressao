@@ -476,9 +476,9 @@
       currentModelGroup = createKeychainModel(cfg);
     } else if (type === "trophy") {
       currentModelGroup = createTrophyModel(cfg);
-    } else if (type === "abelha") {
-      // Carrega o STL real da Abelha Mascote
-      loadSTLUrl("assets/sample_models/ABELHA_FUNKO_MASCOTE.stl", "Mascote 3D Abelha Hollywood");
+    } else if (type === "timelion") {
+      // Carrega o STL real do Chaveiro TimeLion
+      loadSTLUrl("assets/sample_models/CHAVEIRO_TIMELION_COMPLETO.stl", "Chaveiro TimeLion 3D");
       return;
     } else {
       currentModelGroup = createDisplayStandModel(cfg);

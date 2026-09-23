@@ -82,45 +82,6 @@ const PRODUCTS_DATA = [
     ]
   },
   {
-    id: "mascote-abelha-hollywood",
-    name: "Display de Balcão Personalizado (Sua Marca Aqui)",
-    subtitle: "Mascote 3D com Porta-Cartões & Placa Suspensa para Sua Marca",
-    category: "bonecos",
-    categoryName: "Bonecos Personalizados",
-    pumaCategory: "colecionaveis",
-    pumaCategoryLabel: "COLECIONÁVEL 3D • MASCOTE B2B",
-    badge: "Bestseller B2B",
-    isCustomizable: true,
-    customTag: "SUA MARCA AQUI",
-    basePrice: 139.00,
-    wholesalePrice: 80.62,
-    wholesaleMinQty: 30,
-    wholesaleLabel: "R$ 80,62 un (a partir de 30 un)",
-    wholesaleDiscountPercent: "42% OFF",
-    materialDisplay: "PLA Multi-Cores • 4 Cores Bambu AMS",
-    materials: ["PLA Premium Multi-Cores", "PETG Ultra Resistente"],
-    leadTime: "2 a 4 dias úteis",
-    dimensions: "18,5cm (A) × 14,0cm (L) × 12,0cm (P)",
-    weight: "210g",
-    discountTiers: [
-      { min: 1, label: "1 a 9 un", price: 139.00, discount: "Preço Padrão" },
-      { min: 10, label: "10 a 29 un", price: 113.98, discount: "18% OFF" },
-      { min: 30, label: "30+ un (Atacado)", price: 80.62, discount: "42% OFF" }
-    ],
-    description: "Mascote de balcão articulado para pontos de venda e restaurantes. Acompanha porta-cartões de visita integrado e plaquinha frontal personalizável com o logotipo da sua empresa em relevo colorido direto da máquina sem pintura.",
-    b2bBenefits: [
-      "Gera alto engajamento visual no caixa ou balcão de atendimento",
-      "Placa frontal com o nome da SUA MARCA AQUI",
-      "Porta-cartões ou porta-recados embutido na base",
-      "Desconto progressivo de até 42% para redes e franquias"
-    ],
-    mainImage: "assets/images/prod_abelha_clean_white.png",
-    gallery: [
-      "assets/images/prod_abelha_clean_white.png",
-      "assets/images/prod_hollywood_burguer.jpg"
-    ]
-  },
-  {
     id: "boneco-rennan-paraquedista",
     name: "Boneco Personalizado 3D (Sua Marca / Seu Personagem)",
     subtitle: "Escultura Modular Multipeças com Pose Dinâmica e Base Nuvem",

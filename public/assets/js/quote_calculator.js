@@ -10,9 +10,9 @@ const QuoteSimulator = (function () {
   const state = {
     mode: "stl", // "stl" ou "product"
     currentFile: null,
-    currentFileName: "ABELHA_FUNKO_MASCOTE.stl",
+    currentFileName: "CHAVEIRO_TIMELION_COMPLETO.stl",
     currentAnalysis: null,
-    selectedProductId: "mascote-abelha-hollywood",
+    selectedProductId: "boneco-rennan-paraquedista",
     material: "PLA",
     infill: 15,
     colors: 1,
@@ -28,7 +28,7 @@ const QuoteSimulator = (function () {
     cacheDOM();
     bindEvents();
     // Inicializa com um modelo de exemplo pré-carregado
-    loadDefaultSample("assets/sample_models/ABELHA_FUNKO_MASCOTE.stl", "ABELHA_FUNKO_MASCOTE.stl");
+    loadDefaultSample("assets/sample_models/CHAVEIRO_TIMELION_COMPLETO.stl", "CHAVEIRO_TIMELION_COMPLETO.stl");
   }
 
   function cacheDOM() {
@@ -330,7 +330,7 @@ const QuoteSimulator = (function () {
     } catch (err) {
       console.warn("Não foi possível enviar exemplo para a API, usando fallback de cálculo:", err);
       setLoading(false);
-      // Fallback para exibir cálculo estático da Abelha
+      // Fallback para exibir cálculo estático
       recalculate();
     }
   }
