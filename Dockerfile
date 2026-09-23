@@ -7,7 +7,7 @@
 FROM node:20-bookworm-slim
 
 # Metadados
-LABEL maintainer="IMR Impressão 3D <contato@imrimpressao.com.br>"
+LABEL maintainer="IMR Impressão 3D <contato@imrimpressao.com>"
 LABEL description="Catálogo Oficial e Motor de Manufatura Digital 3D - IMR Impressão"
 
 # Instalação limpa do Python 3 e curl (para verificação de integridade/healthcheck)

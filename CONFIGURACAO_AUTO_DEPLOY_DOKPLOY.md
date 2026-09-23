@@ -11,7 +11,7 @@ Configurar o pipeline de **Auto-Deploy Contínuo (CI/CD)** para que, a cada alte
 flowchart LR
     A["💻 Seu Computador\n(Romullo / IMR)"] -->|"1. Executa SUBIR_GITHUB_COM_AUTO_DEPLOY.bat"| B["🐙 Repositório GitHub\n(Branch: main)"]
     B -->|"2. Dispara Webhook Automático"| C["🐳 Dokploy na VPS\n(Webhook Listener)"]
-    C -->|"3. Build Dockerfile\nNode 20 + Python 3"| D["🌐 Catálogo IMR no Ar\n(catalogo.imrimpressao.com.br)"]
+    C -->|"3. Build Dockerfile\nNode 20 + Python 3"| D["🌐 Catálogo IMR no Ar\n(imrimpressao.com / www.imrimpressao.com)"]
 ```
 
 ---
@@ -111,7 +111,7 @@ Para garantir que o Docker rode com perfeição na VPS, certifique-se de que a a
 | **Container Port** | `3000` | Aba *General* |
 | **Volumes / Mounts** | Host: `uploads_data` -> Container: `/app/uploads` | Aba *Volumes* |
 | **Environment Vars** | `NODE_ENV=production`<br>`PORT=3000`<br>`PYTHON_PATH=python3` | Aba *Environment* |
-| **Domínio Próprio** | `catalogo.imrimpressao.com.br` (SSL Let's Encrypt ativo) | Aba *Domains* |
+| **Domínio Próprio** | `imrimpressao.com` e `www.imrimpressao.com` (SSL Let's Encrypt ativo) | Aba *Domains* |
 
 ---
 
@@ -133,9 +133,9 @@ Assim que o deploy for acionado (pelo Webhook ou pelo botão Deploy no Dokploy):
      ```
 
 2. **Testar no Navegador:**
-   - Acesse o endereço configurado: `https://catalogo.imrimpressao.com.br`
+   - Acesse o endereço oficial: `https://www.imrimpressao.com` (ou `https://imrimpressao.com`)
    - Teste a rota de diagnóstico de saúde:
-     `https://catalogo.imrimpressao.com.br/api/health`
+     `https://www.imrimpressao.com/api/health`
      Deve responder:
      ```json
      {
