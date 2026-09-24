@@ -508,6 +508,154 @@ const PRODUCTS_DATA = [
     gallery: [
       "assets/images/organizador_mesa_1789879865373.jpg"
     ]
+  },
+  {
+    id: "mod-volante-bmw-logitech-g29",
+    name: "Kit Volante BMW M-Power para Logitech G29 / G920 / G923",
+    subtitle: "Tampa Central com Emblema BMW 3 Cores e 6 Studs Esportivos",
+    category: "tech",
+    categoryName: "Cases & Tech",
+    pumaCategory: "tech",
+    pumaCategoryLabel: "SIM RACING • MOD LOGITECH G29",
+    badge: "✦ LANÇAMENTO SIM RACING",
+    isCustomizable: true,
+    customTag: "PROJETO ESPECIAL IMR",
+    basePrice: 119.00,
+    wholesalePrice: 69.90,
+    wholesaleMinQty: 10,
+    wholesaleLabel: "R$ 69,90 un (a partir de 10 un)",
+    wholesaleDiscountPercent: "41% OFF",
+    materialDisplay: "PLA Matte Preto, Branco & Azul BMW • Encaixe Plug & Play",
+    materials: ["PLA Matte de Alta Resolução", "Encaixe Direto na Furação Original do Volante"],
+    leadTime: "2 a 3 dias úteis",
+    dimensions: "Tampa Ø 70mm × Altura 5.0mm + 6 Studs Ø 9.0mm",
+    weight: "65g",
+    discountTiers: [
+      { min: 1, label: "1 a 4 un", price: 119.00, discount: "Preço Padrão" },
+      { min: 5, label: "5 a 9 un", price: 89.25, discount: "25% OFF" },
+      { min: 10, label: "10+ un (Atacado)", price: 69.90, discount: "41% OFF" }
+    ],
+    description: "Mod de personalização automotiva para simuladores de corrida. Tampa central com o emblema BMW M-Power fundido em 3 cores puras na Bambu Lab A1, acompanhado de 6 parafusos decorativos esportivos (studs). Encaixe perfeito no volante Logitech G29, G920 e G923, sem necessidade de parafusos adicionais ou adaptações destrutivas.",
+    b2bBenefits: [
+      "Acabamento fosco Matte premium com toque esportivo acetinado",
+      "Fidelidade geométrica ao volante original Logitech",
+      "Ideal para pilotos de simulador, streamers e canais de Sim Racing",
+      "Disponível também com personalização de outros emblemas sob medida"
+    ],
+    mainImage: "assets/images/prod_volante_bmw_logitech_g29.jpg",
+    gallery: [
+      "assets/images/prod_volante_bmw_logitech_g29.jpg"
+    ]
+  },
+  {
+    id: "suporte-celular-geometrico-mesa",
+    name: "Suporte de Celular Anatômico para Mesa (Sua Marca Aqui)",
+    subtitle: "Design Geométrico Minimalista com Passagem Embutida de Cabo",
+    category: "tech",
+    categoryName: "Cases & Tech",
+    pumaCategory: "tech",
+    pumaCategoryLabel: "CASES & TECH • SUPORTE DE MESA",
+    badge: "✦ SUA MARCA AQUI",
+    isCustomizable: true,
+    customTag: "SUA MARCA AQUI",
+    basePrice: 39.00,
+    wholesalePrice: 19.50,
+    wholesaleMinQty: 30,
+    wholesaleLabel: "R$ 19,50 un (a partir de 30 un)",
+    wholesaleDiscountPercent: "50% OFF",
+    materialDisplay: "PLA Tough Bicolor Preto & Branco com Base Antiderrapante",
+    materials: ["PLA Tough de Alta Densidade", "Berço com Abertura para Carregador"],
+    leadTime: "2 a 3 dias úteis",
+    dimensions: "10,5cm (A) × 9,0cm (L) × 9,5cm (P)",
+    weight: "85g",
+    discountTiers: [
+      { min: 1, label: "1 a 9 un", price: 39.00, discount: "Preço Padrão" },
+      { min: 10, label: "10 a 29 un", price: 27.30, discount: "30% OFF" },
+      { min: 30, label: "30+ un (Atacado)", price: 19.50, discount: "50% OFF" }
+    ],
+    description: "Suporte de mesa ergonômico com design geométrico moderno para smartphones e tablets compactos. Mantém a tela no ângulo ideal de 65 graus para videochamadas, notificações e visualização sem cansar o pescoço. Canaleta integrada permite carregar o aparelho enquanto repousa no suporte.",
+    b2bBenefits: [
+      "Brinde corporativo tecnológico de uso diário na mesa de trabalho",
+      "Gravação do logotipo da SUA EMPRESA em relevo de alto contraste",
+      "Compatível com todos os modelos de iPhone, Samsung Galaxy e Xiaomi",
+      "Estabilidade total que não tomba ao tocar na tela"
+    ],
+    mainImage: "assets/images/prod_suporte_celular_mesa.jpg",
+    gallery: [
+      "assets/images/prod_suporte_celular_mesa.jpg"
+    ]
+  },
+  {
+    id: "action-figure-anime-super-saiyan",
+    name: "Action Figure Anime Super Saiyan Warrior 3D Ultra HD",
+    subtitle: "Escultura Colecionável Épica com Efeitos de Energia e Base Rochosa",
+    category: "action-figures",
+    categoryName: "Action Figures",
+    pumaCategory: "colecionaveis",
+    pumaCategoryLabel: "COLECIONÁVEL 3D • ANIME PREMIUM",
+    badge: "✦ LANÇAMENTO ÉPICO",
+    basePrice: 189.00,
+    wholesalePrice: 117.18,
+    wholesaleMinQty: 10,
+    wholesaleLabel: "R$ 117,18 un (a partir de 10 un)",
+    wholesaleDiscountPercent: "38% OFF",
+    materialDisplay: "PLA Tough Ultra HD • Camada 0.12mm • Fundo Branco",
+    materials: ["PLA Tough Ultra HD", "Resina Fotopolímero nos Efeitos de Energia"],
+    leadTime: "3 a 5 dias úteis",
+    dimensions: "23,5cm (A) × 16,0cm (L) × 14,0cm (P)",
+    weight: "310g",
+    discountTiers: [
+      { min: 1, label: "1 a 4 un", price: 189.00, discount: "Preço Padrão" },
+      { min: 5, label: "5 a 9 un", price: 160.65, discount: "15% OFF" },
+      { min: 10, label: "10+ un (Atacado)", price: 117.18, discount: "38% OFF" }
+    ],
+    description: "Estatueta de grande porte inspirada nos guerreiros lendários dos animes clássicos. Apresenta pose de concentração de poder, cabelos dourados pontiagudos com alta fidelidade, músculos hiperdetalhados e base diorama de cratera de rochas vulcânicas com raios de energia translúcidos.",
+    b2bBenefits: [
+      "Peça central de destaque para vitrines, lojas geek e quartos de colecionadores",
+      "Fidelidade milimétrica em expressões e dobras do quimono",
+      "Embalagem especial anti-impacto com berço sob medida",
+      "Margem de revenda expressiva para lojistas e e-commerces"
+    ],
+    mainImage: "assets/images/prod_action_figure_super_saiyan.jpg",
+    gallery: [
+      "assets/images/prod_action_figure_super_saiyan.jpg"
+    ]
+  },
+  {
+    id: "action-figure-anime-warrior-legend",
+    name: "Action Figure Anime Espadachim Místico 3D Ultra HD",
+    subtitle: "Guerreiro Samurai em Pose de Ataque com Espada de Chamas e Capa Fluida",
+    category: "action-figures",
+    categoryName: "Action Figures",
+    pumaCategory: "colecionaveis",
+    pumaCategoryLabel: "COLECIONÁVEL 3D • ANIME GUERREIRO",
+    badge: "✦ EDIÇÃO LIMITADA",
+    basePrice: 179.00,
+    wholesalePrice: 110.98,
+    wholesaleMinQty: 10,
+    wholesaleLabel: "R$ 110,98 un (a partir de 10 un)",
+    wholesaleDiscountPercent: "38% OFF",
+    materialDisplay: "PLA Tough Ultra HD • Resina Alta Definição",
+    materials: ["PLA Tough Ultra HD", "Resina de Engenharia"],
+    leadTime: "3 a 5 dias úteis",
+    dimensions: "22,0cm (A) × 15,0cm (L) × 13,0cm (P)",
+    weight: "280g",
+    discountTiers: [
+      { min: 1, label: "1 a 4 un", price: 179.00, discount: "Preço Padrão" },
+      { min: 5, label: "5 a 9 un", price: 152.15, discount: "15% OFF" },
+      { min: 10, label: "10+ un (Atacado)", price: 110.98, discount: "38% OFF" }
+    ],
+    description: "Guerreiro anime dinâmico com armadura detalhada em tons azul escuro e dourado, capa esculpida com sensação de vento e lâmina mística envolta em chamas brilhantes. Base circular com diorama de pedras facetadas em fundo branco puro.",
+    b2bBenefits: [
+      "Acabamento digno de estátuas importadas de resina com a resistência do PLA Tough",
+      "Pose dinâmica e equilíbrio estrutural perfeito no pedestal",
+      "Excelente demanda no mercado de games e animes",
+      "Alta rentabilidade para revenda especializada"
+    ],
+    mainImage: "assets/images/prod_action_figure_anime_warrior.jpg",
+    gallery: [
+      "assets/images/prod_action_figure_anime_warrior.jpg"
+    ]
   }
 ];
 
