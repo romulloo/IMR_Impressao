@@ -520,20 +520,20 @@ const PRODUCTS_DATA = [
     badge: "✦ LANÇAMENTO SIM RACING F1",
     isCustomizable: true,
     customTag: "PROJETO ESPECIAL IMR",
-    basePrice: 149.00,
-    wholesalePrice: 89.90,
+    basePrice: 250.00,
+    wholesalePrice: 175.00,
     wholesaleMinQty: 5,
-    wholesaleLabel: "R$ 89,90 un (a partir de 5 un)",
-    wholesaleDiscountPercent: "40% OFF",
+    wholesaleLabel: "R$ 175,00 un (a partir de 5 un)",
+    wholesaleDiscountPercent: "30% OFF",
     materialDisplay: "PLA Matte Preto & Azul Cobalto • Fundo Branco",
     materials: ["PLA Matte de Alta Densidade", "Empunhaduras Anatômicas em Azul Matte", "Tampa Central BMW M-Power"],
     leadTime: "2 a 4 dias úteis",
     dimensions: "28,5cm (L) × 18,0cm (A) × 4,5cm (P) • Padrão F1 Real",
     weight: "260g",
     discountTiers: [
-      { min: 1, label: "1 a 2 un", price: 149.00, discount: "Preço Padrão" },
-      { min: 3, label: "3 a 4 un", price: 119.20, discount: "20% OFF" },
-      { min: 5, label: "5+ un (Atacado VIP)", price: 89.90, discount: "40% OFF" }
+      { min: 1, label: "1 a 2 un", price: 250.00, discount: "Preço Padrão" },
+      { min: 3, label: "3 a 4 un", price: 212.50, discount: "15% OFF" },
+      { min: 5, label: "5+ un (Atacado VIP)", price: 175.00, discount: "30% OFF" }
     ],
     description: "Mod oficial de Volante Fórmula 1 / GT para simuladores Logitech G29, G920 e G923. Estrutura rígida em PLA Matte preto com alívio de peso hexagonal, empunhaduras laterais ergonômicas em azul matte, 4 capas de botões em azul e tampa central com o logotipo da BMW. Encaixe direto na furação original do volante, sem necessidade de furar ou danificar a base.",
     b2bBenefits: [
