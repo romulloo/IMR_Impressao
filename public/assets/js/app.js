@@ -6,7 +6,7 @@
  * =============================================================================
  */
 
-const IMR_WHATSAPP_NUMBER = "5541999273954";
+const IMR_WHATSAPP_NUMBER = "5541987698054";
 
 // Estado da Aplicação
 const AppState = {

@@ -538,7 +538,7 @@ const QuoteSimulator = (function () {
     ];
 
     const fullMessage = encodeURIComponent(messageLines.join("\n"));
-    const waUrl = `https://wa.me/5541999273954?text=${fullMessage}`;
+    const waUrl = `https://wa.me/5541987698054?text=${fullMessage}`;
     window.open(waUrl, "_blank");
   }
 

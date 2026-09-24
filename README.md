@@ -159,6 +159,6 @@ catalogo_imr_fullstack/
 - **Responsável:** Romullo (IMR Impressão)
 - **Website Oficial:** [imrimpressao.com](https://www.imrimpressao.com)
 - **E-mail Institucional:** [contato@imrimpressao.com](mailto:contato@imrimpressao.com)
-- **WhatsApp:** (41) 99927-3954
+- **WhatsApp:** (41) 98769-8054
 - **Instagram:** [@imr_impressao](https://instagram.com/imr_impressao)
 - **Localização:** Curitiba - PR
