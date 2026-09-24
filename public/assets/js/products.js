@@ -512,7 +512,7 @@ const PRODUCTS_DATA = [
   {
     id: "mod-volante-bmw-logitech-g29",
     name: "Volante Fórmula 1 Mod BMW M-Power para Logitech G29 / G920 / G923",
-    subtitle: "Aro F1 GT Yoke Butterfly com Empunhaduras Ergonômicas, Centro BMW e 6 Studs",
+    subtitle: "Aro F1 GT com Empunhaduras em Azul Matte, Faceplate Vazado e Tampa BMW",
     category: "tech",
     categoryName: "Cases & Tech",
     pumaCategory: "tech",
@@ -525,22 +525,22 @@ const PRODUCTS_DATA = [
     wholesaleMinQty: 5,
     wholesaleLabel: "R$ 89,90 un (a partir de 5 un)",
     wholesaleDiscountPercent: "40% OFF",
-    materialDisplay: "PLA Tough HD + Grips Texturizados • Fundo Branco",
-    materials: ["PLA Tough Estrutural de Alta Densidade", "Empunhaduras com Grip Antiderrapante", "Tampa Central BMW M-Power"],
+    materialDisplay: "PLA Matte Preto & Azul Cobalto • Fundo Branco",
+    materials: ["PLA Matte de Alta Densidade", "Empunhaduras Anatômicas em Azul Matte", "Tampa Central BMW M-Power"],
     leadTime: "2 a 4 dias úteis",
     dimensions: "28,5cm (L) × 18,0cm (A) × 4,5cm (P) • Padrão F1 Real",
-    weight: "280g",
+    weight: "260g",
     discountTiers: [
       { min: 1, label: "1 a 2 un", price: 149.00, discount: "Preço Padrão" },
       { min: 3, label: "3 a 4 un", price: 119.20, discount: "20% OFF" },
       { min: 5, label: "5+ un (Atacado VIP)", price: 89.90, discount: "40% OFF" }
     ],
-    description: "Mod completo de Volante Fórmula 1 / GT para simuladores de corrida. Design butterfly yoke com empunhaduras ergonômicas texturizadas, acesso livre a todos os botões e borboletas de marcha (paddle shifters) do Logitech G29, G920 e G923. Inclui a tampa central com emblema BMW M-Power e 6 parafusos decorativos esportivos (studs). Instalação plug & play direta na furação original sem danificar o volante.",
+    description: "Mod oficial de Volante Fórmula 1 / GT para simuladores Logitech G29, G920 e G923. Estrutura rígida em PLA Matte preto com alívio de peso hexagonal, empunhaduras laterais ergonômicas em azul matte, 4 capas de botões em azul e tampa central com o logotipo da BMW. Encaixe direto na furação original do volante, sem necessidade de furar ou danificar a base.",
     b2bBenefits: [
-      "Ergonomia autêntica de monopostos de Fórmula 1 e carros GT3",
-      "Grips anatômicos de alta aderência para longas sessões de corrida",
-      "Tampa central BMW M-Power com acabamento acetinado de luxo",
-      "Sucesso garantido de vendas para comunidades de automobilismo virtual"
+      "Design exatamente igual ao projeto original Bambu Lab F1 Rim",
+      "Empunhaduras ergonômicas em azul matte de alta aderência",
+      "Tampa central com emblema BMW e encaixes perfeitos",
+      "Compatível com toda a furação e eletrônica original do Logitech"
     ],
     mainImage: "assets/images/prod_volante_bmw_logitech_g29.jpg",
     gallery: [
