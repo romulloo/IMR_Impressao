@@ -317,45 +317,6 @@ const PRODUCTS_DATA = [
     ]
   },
   {
-    id: "display-expositor-pdv",
-    name: "Display Expositor de Balcão (Sua Marca Aqui)",
-    subtitle: "Suporte Multifuncional para Produtos, Folhetos e Cartões",
-    category: "displays",
-    categoryName: "Displays & PDV",
-    pumaCategory: "displays",
-    pumaCategoryLabel: "DISPLAYS & PDV • BALCÃO",
-    badge: "✦ SUA MARCA AQUI",
-    isCustomizable: true,
-    customTag: "SUA MARCA AQUI",
-    basePrice: 89.00,
-    wholesalePrice: 48.95,
-    wholesaleMinQty: 15,
-    wholesaleLabel: "R$ 48,95 un (a partir de 15 un)",
-    wholesaleDiscountPercent: "45% OFF",
-    materialDisplay: "PETG Estrutural Antirrisco",
-    materials: ["PETG Reforçado 3mm", "Encaixes de Travamento Rápido"],
-    leadTime: "2 a 4 dias úteis",
-    dimensions: "22,0cm (A) × 18,0cm (L) × 14,0cm (P)",
-    weight: "260g",
-    discountTiers: [
-      { min: 1, label: "1 a 4 un", price: 89.00, discount: "Preço Padrão" },
-      { min: 5, label: "5 a 14 un", price: 66.75, discount: "25% OFF" },
-      { min: 15, label: "15+ un (Atacado)", price: 48.95, discount: "45% OFF" }
-    ],
-    description: "Estrutura robusta para destacar produtos no ponto de venda (PDV). Permite exibir cosméticos, acessórios de celular, eletrônicos ou panfletos promocionais com a SUA MARCA AQUI no frontão superior.",
-    b2bBenefits: [
-      "Aumenta o giro de produtos no ponto focal do cliente",
-      "Frontão superior com logotipo da SUA EMPRESA em 4 cores diretas",
-      "Leve para transporte, porém firme e estável na bancada",
-      "Personalizável sob medida para as dimensões do seu produto"
-    ],
-    mainImage: "assets/images/prod_display_balcao_suamarca.png",
-    gallery: [
-      "assets/images/prod_display_balcao_suamarca.png",
-      "assets/images/prod_suporte_pdv.jpg"
-    ]
-  },
-  {
     id: "letreiro-logo-3d-led-luminoso",
     name: "Letreiro Luminoso 3D (Sua Marca Aqui)",
     subtitle: "Logo Volumétrico Caixa Alta com Iluminação LED Interna",
