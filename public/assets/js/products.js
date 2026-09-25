@@ -235,10 +235,10 @@ const PRODUCTS_DATA = [
     "pumaCategory": "natal",
     "pumaCategoryLabel": "🎄 NATAL 3D • DESIGN PARAMÉTRICO",
     "badge": "🎄 EXCLUSIVIDADE IMR",
-    "basePrice": 99.0,
-    "wholesalePrice": 59.4,
+    "basePrice": 49.99,
+    "wholesalePrice": 29.99,
     "wholesaleMinQty": 10,
-    "wholesaleLabel": "R$ 59,40 un (a partir de 10 un)",
+    "wholesaleLabel": "R$ 29,99 un (a partir de 10 un)",
     "wholesaleDiscountPercent": "40% OFF",
     "materialDisplay": "PLA Silk Bicolor Verde Esmeralda & Ouro Nobre",
     "materials": [
@@ -252,19 +252,19 @@ const PRODUCTS_DATA = [
       {
         "min": 1,
         "label": "1 a 4 un",
-        "price": 99.0,
+        "price": 49.99,
         "discount": "Preço Padrão"
       },
       {
         "min": 5,
         "label": "5 a 9 un",
-        "price": 79.2,
+        "price": 39.99,
         "discount": "20% OFF"
       },
       {
         "min": 10,
         "label": "10+ un (Atacado)",
-        "price": 59.4,
+        "price": 29.99,
         "discount": "40% OFF"
       }
     ],
@@ -380,11 +380,11 @@ const PRODUCTS_DATA = [
     "badge": "✦ LINHA FEMININA",
     "isCustomizable": true,
     "customTag": "GRAVAÇÃO DO SEU NOME",
-    "basePrice": 34.9,
-    "wholesalePrice": 18.5,
+    "basePrice": 22.9,
+    "wholesalePrice": 13.9,
     "wholesaleMinQty": 20,
-    "wholesaleLabel": "R$ 18,50 un (a partir de 20 un)",
-    "wholesaleDiscountPercent": "47% OFF",
+    "wholesaleLabel": "R$ 13,90 un (a partir de 20 un)",
+    "wholesaleDiscountPercent": "40% OFF",
     "materialDisplay": "PLA Matte Rosa Pastel & Vermelho Morango",
     "materials": [
       "PLA Silk & Matte",
@@ -397,20 +397,20 @@ const PRODUCTS_DATA = [
       {
         "min": 1,
         "label": "1 a 9 un",
-        "price": 34.9,
+        "price": 22.9,
         "discount": "Preço Padrão"
       },
       {
         "min": 10,
         "label": "10 a 19 un",
-        "price": 24.5,
-        "discount": "30% OFF"
+        "price": 17.9,
+        "discount": "22% OFF"
       },
       {
         "min": 20,
         "label": "20+ un (Atacado)",
-        "price": 18.5,
-        "discount": "47% OFF"
+        "price": 13.9,
+        "discount": "40% OFF"
       }
     ],
     "description": "Suporte delicado e funcional esculpido especialmente para acomodar o hidratante labial Nivea Morango Shine e cosméticos de bolso. Design fofo com relevos florais e formato de moranguinho com base antiderrapante.",
@@ -520,11 +520,11 @@ const PRODUCTS_DATA = [
     "pumaCategory": "utilidades",
     "pumaCategoryLabel": "LINHA FEMININA • BANCADA",
     "badge": "✦ LINHA BANCADA LUXO",
-    "basePrice": 79.0,
-    "wholesalePrice": 44.5,
-    "wholesaleMinQty": 15,
-    "wholesaleLabel": "R$ 44,50 un (a partir de 15 un)",
-    "wholesaleDiscountPercent": "44% OFF",
+    "basePrice": 16.66,
+    "wholesalePrice": 16.66,
+    "wholesaleMinQty": 6,
+    "wholesaleLabel": "6 un por R$ 100,00 (R$ 16,66 un)",
+    "wholesaleDiscountPercent": "PROMO 6 UN",
     "materialDisplay": "PLA Matte Rosé Gold & Off-White Fluted",
     "materials": [
       "PLA Resistente com Textura Canelada",
@@ -536,21 +536,15 @@ const PRODUCTS_DATA = [
     "discountTiers": [
       {
         "min": 1,
-        "label": "1 a 4 un",
-        "price": 79.0,
+        "label": "1 a 5 un",
+        "price": 16.66,
         "discount": "Preço Padrão"
       },
       {
-        "min": 5,
-        "label": "5 a 14 un",
-        "price": 59.9,
-        "discount": "24% OFF"
-      },
-      {
-        "min": 15,
-        "label": "15+ un (Atacado)",
-        "price": 44.5,
-        "discount": "44% OFF"
+        "min": 6,
+        "label": "A partir de 6 un",
+        "price": 16.66,
+        "discount": "6 un por R$ 100,00"
       }
     ],
     "description": "Organizador moderno inspirado na tendência de design canelado fluted. Estrutura escalonada em múltiplos cilindros de alturas distintas para organizar ordenadamente pincéis de base, delineadores, batons, hidratantes e séruns faciais.",
@@ -584,7 +578,7 @@ const PRODUCTS_DATA = [
   {
     "id": "copo-3d-homem-aranha",
     "name": "Copo Temático 3D Homem-Aranha (Spider-Man)",
-    "subtitle": "Copo com Luva Protetora em TPU Bicolor com Máscara e Teias em Alto Relevo 3D",
+    "subtitle": "Copo 100% Plástico Impresso em 3D com Máscara e Teias em Alto Relevo Multicor",
     "category": "utilidades",
     "categoryName": "Copos & Utilidades",
     "pumaCategory": "utilidades",
@@ -595,11 +589,11 @@ const PRODUCTS_DATA = [
     "wholesaleMinQty": 20,
     "wholesaleLabel": "R$ 54,90 un (a partir de 20 un)",
     "wholesaleDiscountPercent": "45% OFF",
-    "materialDisplay": "PLA Tough / TPU Emborrachado Bicolor • Tampa com Trava",
+    "materialDisplay": "100% Plástico PLA Tough 3D • Sem Metal • Tampa com Trava",
     "materials": [
-      "Corpo Rígido em PLA Tough Alimentício",
-      "Luva Protetora TPU com Textura Teia",
-      "Tampa Anatômica"
+      "Corpo 100% Plástico em PLA Tough Alimentício de Alta Densidade",
+      "Máscara e Teias em Alto Relevo Coextrudados em Plástico Multicor",
+      "Tampa Anatômica em Plástico com Bocal Anti-Respingo"
     ],
     "leadTime": "2 a 4 dias úteis",
     "dimensions": "18,0cm (A) × 8,8cm (Ø) • Capacidade 480ml",
@@ -624,12 +618,12 @@ const PRODUCTS_DATA = [
         "discount": "45% OFF"
       }
     ],
-    "description": "Copo temático premium com luva geométrica tridimensional esculpida com a icônica máscara do Homem-Aranha e textura de teias em relevo táctil. Produzido com precisão milimétrica na Bambu Lab A1, com fundo branco puro.",
+    "description": "Copo temático premium 100% plástico fabricado em manufatura aditiva de alta precisão na Bambu Lab. Apresenta relevos tridimensionais da máscara do Homem-Aranha e textura de teias com encaixe anatômico e tampa plástica com bocal.",
     "b2bBenefits": [
-      "Design exclusivo que chama atenção imediata do público geek, jovem e colecionador",
-      "Luva em TPU com grip anatômico que protege contra batidas e quedas",
-      "Tampa segura com bocal anti-respingo",
-      "Produto campeão de vendas em datas comemorativas e convenções"
+      "Design 100% polímero resistente, leve e sem partes metálicas",
+      "Relevos anatômicos que facilitam a pegada e proporcionam estética geek marcante",
+      "Tampa de plástico segura com bocal anti-respingo",
+      "Produto campeão de vendas para datas comemorativas e convenções"
     ],
     "images": [
       "assets/images/prod_copo-3d-homem-aranha_1_front.jpg",
@@ -655,7 +649,7 @@ const PRODUCTS_DATA = [
   {
     "id": "copo-3d-times-futebol",
     "name": "Copos Temáticos 3D de Times de Futebol (Vasco, Athletico, Flamengo e Mais)",
-    "subtitle": "Porta-Lata / Copo Temático com Escudo Oficial Tridimensional em Relevo e Grip Ergonômico",
+    "subtitle": "Copo 100% Plástico Impresso em 3D com Escudo Oficial Tridimensional em Relevo",
     "category": "utilidades",
     "categoryName": "Copos & Utilidades",
     "pumaCategory": "utilidades",
@@ -668,11 +662,11 @@ const PRODUCTS_DATA = [
     "wholesaleMinQty": 20,
     "wholesaleLabel": "R$ 52,00 un (a partir de 20 un)",
     "wholesaleDiscountPercent": "45% OFF",
-    "materialDisplay": "PLA Tough Bicolor nas Cores do Clube • Relevo Multi-Cores",
+    "materialDisplay": "100% Plástico PLA Tough 3D • Sem Metal • Relevo Multi-Cores",
     "materials": [
-      "PLA Tough Alta Densidade",
-      "Escudo do Time em Relevo Coextrudado",
-      "Tampa Segura"
+      "Corpo 100% Plástico em PLA Tough Alta Densidade",
+      "Escudo do Clube em Relevo Coextrudado em Plástico 3D",
+      "Tampa de Plástico Segura com Bocal"
     ],
     "leadTime": "2 a 4 dias úteis",
     "dimensions": "17,5cm (A) × 8,5cm (Ø) • Capacidade 470ml",
