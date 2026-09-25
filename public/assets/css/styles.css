@@ -52,6 +52,9 @@
 html {
   scroll-behavior: smooth;
   color-scheme: light;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important;
 }
 
 body {
@@ -61,6 +64,15 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important;
+  position: relative;
+}
+
+main {
+  width: 100%;
+  max-width: 100%;
   overflow-x: hidden;
 }
 
@@ -99,8 +111,18 @@ button, input, select {
 .container {
   width: 100%;
   max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 24px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 680px) {
+  .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
 }
 
 /* =============================================================================
@@ -116,13 +138,18 @@ button, input, select {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   font-weight: 700;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 .ticker-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   flex-wrap: wrap;
+  width: 100%;
+  max-width: 100%;
 }
 .ticker-content {
   display: flex;
@@ -513,6 +540,7 @@ button, input, select {
 .catalog-section {
   padding: 40px 0 90px;
   background-color: var(--puma-gray-ultra-light);
+  scroll-margin-top: 72px;
 }
 
 .catalog-section-header {
@@ -520,6 +548,8 @@ button, input, select {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  text-align: center;
+  align-items: center;
 }
 .catalog-title {
   font-family: var(--font-condensed);
@@ -550,8 +580,13 @@ button, input, select {
   align-items: center;
   gap: 8px;
   overflow-x: auto;
-  padding-bottom: 4px;
+  -webkit-overflow-scrolling: touch;
+  padding: 4px 2px 10px;
   scrollbar-width: thin;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overscroll-behavior-x: contain;
 }
 .category-pill {
   background: #ffffff;
@@ -601,6 +636,8 @@ button, input, select {
   justify-content: space-between;
   gap: 16px;
   flex-wrap: wrap;
+  width: 100%;
+  max-width: 100%;
 }
 .search-input-box {
   position: relative;
@@ -681,24 +718,43 @@ button, input, select {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
+  width: 100%;
+  max-width: 100%;
+  justify-content: center;
 }
 
 @media (max-width: 1200px) {
   .products-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    justify-content: center;
   }
 }
-@media (max-width: 860px) {
+@media (max-width: 920px) {
   .products-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    justify-content: center;
+  }
+  .puma-product-card {
+    width: 100%;
+    margin: 0 auto;
   }
 }
-@media (max-width: 540px) {
+@media (max-width: 580px) {
   .products-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 22px;
+    justify-content: center;
+    justify-items: center; /* Centraliza a div do card no celular */
+    width: 100%;
+    max-width: 100%;
+  }
+  .puma-product-card {
+    width: 100%;
+    max-width: 380px; /* Card com largura elegante e bem centralizado */
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -1127,9 +1183,14 @@ button, input, select {
   transition: transform var(--trans-smooth);
   display: flex;
   flex-direction: column;
+  visibility: hidden;
+  pointer-events: none;
+  transition: transform var(--trans-smooth), visibility var(--trans-smooth);
 }
 .cart-drawer.open {
   transform: translateX(0);
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .cart-drawer-header {
@@ -1391,9 +1452,14 @@ button, input, select {
   transition: transform var(--trans-smooth);
   display: flex;
   flex-direction: column;
+  visibility: hidden;
+  pointer-events: none;
+  transition: transform var(--trans-smooth), visibility var(--trans-smooth);
 }
 .mobile-menu-drawer.open {
   transform: translateX(0);
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .mobile-menu-header {
@@ -1654,6 +1720,8 @@ button, input, select {
   flex-wrap: wrap;
   gap: 24px;
   margin-bottom: 30px;
+  width: 100%;
+  max-width: 100%;
 }
 .footer-brand-info {
   display: flex;
@@ -1673,12 +1741,14 @@ button, input, select {
 }
 .footer-links {
   display: flex;
-  gap: 24px;
+  gap: 16px 24px;
   font-family: var(--font-condensed);
   font-size: 0.92rem;
   font-weight: 800;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  flex-wrap: wrap;
+  max-width: 100%;
 }
 .footer-links a {
   color: #cccccc;
@@ -1701,7 +1771,7 @@ button, input, select {
 }
 
 /* =============================================================================
-   11. RESPONSIVIDADE PUMA
+   11. RESPONSIVIDADE PUMA (CELULAR, TABLET E DESKTOP PERFEITAMENTE CENTRALIZADOS)
    ============================================================================= */
 @media (max-width: 1080px) {
   .puma-categories-nav {
@@ -1712,37 +1782,221 @@ button, input, select {
   }
 }
 
+/* Tablet (iPad, telas até 820px) */
+@media (max-width: 820px) {
+  .hero-puma-content {
+    margin: 0 auto;
+    text-align: center;
+    padding: 44px 0 36px;
+  }
+  .hero-puma-tagline {
+    font-size: 0.92rem;
+    letter-spacing: 0.16em;
+  }
+  .hero-puma-title {
+    font-size: 3rem;
+  }
+  .hero-puma-desc {
+    margin: 0 auto 24px;
+    font-size: 0.95rem;
+  }
+  .hero-puma-badges {
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+  .hero-puma-actions {
+    justify-content: center;
+    gap: 12px;
+  }
+  .search-sort-bar {
+    gap: 12px;
+  }
+}
+
+/* Celular e Telas Menores (até 680px) */
 @media (max-width: 680px) {
+  .site-header {
+    height: auto;
+  }
+  .puma-nav-container {
+    height: 58px;
+    gap: 8px;
+    justify-content: space-between;
+  }
+  .puma-logo-img {
+    height: 30px;
+  }
+  .puma-nav-right {
+    gap: 6px;
+  }
+  .puma-nav-btn {
+    width: 34px;
+    height: 34px;
+  }
+  .puma-nav-btn svg {
+    width: 19px;
+    height: 19px;
+  }
+  .puma-mobile-btn {
+    width: 34px;
+    height: 34px;
+  }
+  .puma-mobile-btn svg {
+    width: 22px;
+    height: 22px;
+  }
   .puma-search-box {
-    padding: 4px 8px;
+    padding: 3px 6px;
+    height: 34px;
+  }
+  .puma-search-box svg {
+    width: 15px;
+    height: 15px;
+    margin-right: 4px;
   }
   .puma-search-input {
-    width: 60px;
+    width: 44px;
+    font-size: 0.80rem;
   }
   .puma-search-box:focus-within .puma-search-input {
-    width: 110px;
+    width: 90px;
   }
+  #nav-user-whatsapp-btn {
+    display: none; /* No celular economiza espaço precioso na navbar */
+  }
+
+  /* Banner Flutuante Centralizado e Contido */
   .puma-floating-banner {
-    bottom: 14px;
-    left: 14px;
-    right: 14px;
-    padding: 10px 14px;
-    font-size: 0.84rem;
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    width: calc(100% - 24px);
+    max-width: calc(100% - 24px);
+    margin: 0 auto;
+    padding: 9px 12px;
+    font-size: 0.80rem;
+    gap: 10px;
+    justify-content: space-between;
   }
+  .floating-banner-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.78rem;
+  }
+
+  /* Hero Banner no Celular */
   .hero-puma-content {
-    padding: 40px 0 35px;
+    padding: 36px 0 30px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .hero-puma-tagline {
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    margin-bottom: 8px;
+  }
+  .hero-puma-title {
+    font-size: 2.1rem;
+    margin-bottom: 14px;
+  }
+  .hero-puma-desc {
+    font-size: 0.86rem;
+    margin: 0 auto 18px;
+    line-height: 1.45;
+  }
+  .hero-puma-badges {
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 20px;
+  }
+  .hero-puma-badges span {
+    font-size: 0.68rem;
+    padding: 3px 7px;
   }
   .hero-puma-actions {
     flex-direction: column;
     align-items: stretch;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    gap: 10px;
   }
   .puma-btn-primary, .puma-btn-secondary {
     text-align: center;
     width: 100%;
+    padding: 12px 20px;
+    font-size: 0.94rem;
+  }
+
+  /* Barra de Busca e Ordenação no Celular */
+  .search-sort-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .search-input-box {
+    max-width: 100%;
+    width: 100%;
+  }
+  .sort-select-box {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .sort-select {
+    flex: 1;
+    width: 100%;
+  }
+  .catalog-meta-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 6px;
+  }
+
+  /* Rodapé Centralizado no Celular */
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .footer-links {
+    justify-content: center;
+    text-align: center;
+    gap: 10px 16px;
+    font-size: 0.82rem;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+/* Telas Ultra-Pequenas (<= 380px, ex: iPhone SE / Android Compacto) */
+@media (max-width: 380px) {
+  .puma-search-input {
+    display: none;
+  }
+  .puma-search-box:focus-within .puma-search-input {
+    display: inline-block;
+    width: 75px;
+  }
+  .puma-search-box svg {
+    margin-right: 0;
+  }
+  .puma-nav-right {
+    gap: 4px;
+  }
+  .puma-logo-img {
+    height: 25px;
   }
 }
 
 /* =============================================================================
+   12. ESPECIAL DE NATAL/* =============================================================================
    12. ESPECIAL DE NATAL 2026 & GALERIA 4 POSIÇÕES FUNDO BRANCO PURO (#FFFFFF)
    ============================================================================= */
 
@@ -1751,8 +2005,10 @@ button, input, select {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  right: 0;
+  bottom: 0;
+  width: 100% !important;
+  height: 100% !important;
   pointer-events: none;
   z-index: 99999;
 }
