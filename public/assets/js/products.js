@@ -874,11 +874,11 @@ const PRODUCTS_DATA = [
     "pumaCategory": "utilidades",
     "pumaCategoryLabel": "UTILIDADES • LINHA AUTOMOTIVA",
     "badge": "✦ LANÇAMENTO AUTOMOTIVO",
-    "basePrice": 89.0,
-    "wholesalePrice": 48.95,
-    "wholesaleMinQty": 15,
-    "wholesaleLabel": "R$ 48,95 un (a partir de 15 un)",
-    "wholesaleDiscountPercent": "45% OFF",
+    "basePrice": 170.0,
+    "wholesalePrice": 102.0,
+    "wholesaleMinQty": 30,
+    "wholesaleLabel": "R$ 102,00 un (a partir de 30 un)",
+    "wholesaleDiscountPercent": "40% OFF",
     "materialDisplay": "PLA Tough Prata Metálico, Preto Fosco & Vermelho Freio",
     "materials": [
       "PLA Resistente Automotivo",
@@ -891,21 +891,21 @@ const PRODUCTS_DATA = [
     "discountTiers": [
       {
         "min": 1,
-        "label": "1 a 4 un",
-        "price": 89.0,
+        "label": "1 a 9 un",
+        "price": 170.0,
         "discount": "Preço Padrão"
       },
       {
-        "min": 5,
-        "label": "5 a 14 un",
-        "price": 68.0,
-        "discount": "24% OFF"
+        "min": 10,
+        "label": "10 a 29 un",
+        "price": 127.5,
+        "discount": "25% OFF"
       },
       {
-        "min": 15,
-        "label": "15+ un (Atacado)",
-        "price": 48.95,
-        "discount": "45% OFF"
+        "min": 30,
+        "label": "30+ un (Atacado)",
+        "price": 102.0,
+        "discount": "40% OFF"
       }
     ],
     "description": "Porta-chaves de parede escultural reproduzindo nos mínimos detalhes a traseira nostálgica do GM Celta 2002. Possui lanternas bicolores vermelhas e âmbar, placa em baixo relevo, vidro traseiro em preto piano e 4 ganchos resistentes.",
@@ -1085,11 +1085,11 @@ const PRODUCTS_DATA = [
     "pumaCategory": "colecionaveis",
     "pumaCategoryLabel": "COLECIONÁVEL 3D • LINHA SACRA DEVOCIONAL",
     "badge": "✦ LINHA SACRA DEVOCIONAL",
-    "basePrice": 119.0,
-    "wholesalePrice": 69.9,
+    "basePrice": 360.0,
+    "wholesalePrice": 234.0,
     "wholesaleMinQty": 10,
-    "wholesaleLabel": "R$ 69,90 un (a partir de 10 un)",
-    "wholesaleDiscountPercent": "41% OFF",
+    "wholesaleLabel": "R$ 234,00 un (a partir de 10 un)",
+    "wholesaleDiscountPercent": "35% OFF",
     "materialDisplay": "PLA Branco Seda Marfim & Coroa Ouro Metálico",
     "materials": [
       "PLA Silk Marfim Devocional",
@@ -1103,20 +1103,20 @@ const PRODUCTS_DATA = [
       {
         "min": 1,
         "label": "1 a 4 un",
-        "price": 119.0,
+        "price": 360.0,
         "discount": "Preço Padrão"
       },
       {
         "min": 5,
         "label": "5 a 9 un",
-        "price": 89.9,
-        "discount": "24% OFF"
+        "price": 288.0,
+        "discount": "20% OFF"
       },
       {
         "min": 10,
         "label": "10+ un (Atacado)",
-        "price": 69.9,
-        "discount": "41% OFF"
+        "price": 234.0,
+        "discount": "35% OFF"
       }
     ],
     "description": "Escultura de arte sacra com manto fluido em dobras suaves e mãos postas em oração. Impressa em PLA seda branco marfim que confere aspecto de mármore acetinado. Acompanha coroa de glória com raios em ouro reluzente.",
