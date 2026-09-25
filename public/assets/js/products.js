@@ -159,11 +159,11 @@ const PRODUCTS_DATA = [
     "badge": "🎄 ESPECIAL DE NATAL",
     "isCustomizable": true,
     "customTag": "SEU NOME / SUA LOGO",
-    "basePrice": 24.9,
-    "wholesalePrice": 9.9,
+    "basePrice": 9.99,
+    "wholesalePrice": 6.99,
     "wholesaleMinQty": 50,
-    "wholesaleLabel": "R$ 9,90 un (a partir de 50 un)",
-    "wholesaleDiscountPercent": "60% OFF",
+    "wholesaleLabel": "R$ 6,99 un (a partir de 50 un)",
+    "wholesaleDiscountPercent": "30% OFF",
     "materialDisplay": "PLA Silk Ouro Metálico, Rubi & Branco Pérola",
     "materials": [
       "PLA Silk com Refletividade Premium",
@@ -176,26 +176,26 @@ const PRODUCTS_DATA = [
       {
         "min": 1,
         "label": "1 a 9 un",
-        "price": 24.9,
+        "price": 9.99,
         "discount": "Preço Padrão"
       },
       {
         "min": 10,
         "label": "10 a 29 un",
-        "price": 18.9,
-        "discount": "24% OFF"
+        "price": 8.99,
+        "discount": "10% OFF"
       },
       {
         "min": 30,
         "label": "30 a 49 un",
-        "price": 14.5,
-        "discount": "41% OFF"
+        "price": 7.99,
+        "discount": "20% OFF"
       },
       {
         "min": 50,
         "label": "50+ un (Atacado)",
-        "price": 9.9,
-        "discount": "60% OFF"
+        "price": 6.99,
+        "discount": "30% OFF"
       }
     ],
     "description": "Bolas de Natal 3D de alto luxo com padrões geométricos vazados em renda tridimensional. Personalizadas com o nome da família, membros queridos ou a logomarca da sua empresa na faixa central. Acompanha fita de cetim acetinado pronta para pendurar na árvore.",
