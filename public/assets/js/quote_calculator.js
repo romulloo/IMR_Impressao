@@ -12,7 +12,7 @@ const QuoteSimulator = (function () {
     currentFile: null,
     currentFileName: "CHAVEIRO_TIMELION_COMPLETO.stl",
     currentAnalysis: null,
-    selectedProductId: "boneco-rennan-paraquedista",
+    selectedProductId: "boneco-personalizado-mascote-3d",
     material: "PLA",
     infill: 15,
     colors: 1,

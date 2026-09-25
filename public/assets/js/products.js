@@ -936,77 +936,7 @@ const PRODUCTS_DATA = [
       "Detalhe 3D / Macro (0.12mm)"
     ]
   },
-  {
-    "id": "boneco-rennan-sentado-vaso",
-    "name": "Mascote Rennan Sentado no Vaso Sanitário 3D (Edição Humor)",
-    "subtitle": "Escultura Modular Multipeças 4 Cores AMS Bambu Lab com Óculos e Base Detalhada",
-    "category": "colecionaveis",
-    "categoryName": "Colecionáveis & Geek",
-    "pumaCategory": "colecionaveis",
-    "pumaCategoryLabel": "COLECIONÁVEL 3D • HUMOR & MEME",
-    "badge": "✦ MEME & HUMOR VIP",
-    "basePrice": 139.0,
-    "wholesalePrice": 80.62,
-    "wholesaleMinQty": 10,
-    "wholesaleLabel": "R$ 80,62 un (a partir de 10 un)",
-    "wholesaleDiscountPercent": "42% OFF",
-    "materialDisplay": "PLA Multi-Cores 4 Tons Bambu Lab A1",
-    "materials": [
-      "PLA Premium Multi-Cores",
-      "Peças Modulares com Encaixe Macho-Fêmea 0.15mm"
-    ],
-    "leadTime": "3 a 5 dias úteis",
-    "dimensions": "16,0cm (A) × 11,5cm (L) × 10,0cm (P)",
-    "weight": "210g",
-    "discountTiers": [
-      {
-        "min": 1,
-        "label": "1 a 4 un",
-        "price": 139.0,
-        "discount": "Preço Padrão"
-      },
-      {
-        "min": 5,
-        "label": "5 a 9 un",
-        "price": 109.0,
-        "discount": "22% OFF"
-      },
-      {
-        "min": 10,
-        "label": "10+ un (Atacado)",
-        "price": 80.62,
-        "discount": "42% OFF"
-      }
-    ],
-    "description": "Edição especial comemorativa e divertida do personagem Rennan sentado no vaso sanitário com pose cômica e descontraída. Modelado com óculos de grau em relevo, barba esculpida, cueca personalizada e vaso sanitário com textura de cerâmica brilhante.",
-    "b2bBenefits": [
-      "Presente icônico para brincadeiras entre amigos, formaturas e troféu de 'inimigo secreto'",
-      "Construção modular com separação cromática limpa e sem falhas de pintura",
-      "Base estável que fica perfeita sobre mesas de trabalho e estantes",
-      "Altíssimo engajamento como peça promocional de humor e descontração"
-    ],
-    "images": [
-      "assets/images/prod_boneco-rennan-sentado-vaso_1_front.jpg",
-      "assets/images/prod_boneco-rennan-sentado-vaso_2_hero.jpg",
-      "assets/images/prod_boneco-rennan-sentado-vaso_3_side.jpg",
-      "assets/images/prod_boneco-rennan-sentado-vaso_4_detail.jpg"
-    ],
-    "gallery": [
-      "assets/images/prod_boneco-rennan-sentado-vaso_1_front.jpg",
-      "assets/images/prod_boneco-rennan-sentado-vaso_2_hero.jpg",
-      "assets/images/prod_boneco-rennan-sentado-vaso_3_side.jpg",
-      "assets/images/prod_boneco-rennan-sentado-vaso_4_detail.jpg"
-    ],
-    "image": "assets/images/prod_boneco-rennan-sentado-vaso_1_front.jpg",
-    "mainImage": "assets/images/prod_boneco-rennan-sentado-vaso_1_front.jpg",
-    "imageLabels": [
-      "Vista Frontal (Front)",
-      "Perspectiva 3/4 (Hero)",
-      "Vista Lateral (Side)",
-      "Detalhe 3D / Macro (0.12mm)"
-    ]
-  },
-  {
+    {
     "id": "copo-3d-nitro-monster",
     "name": "Copo Temático 3D Nitro NOS Monster Energy",
     "subtitle": "Porta-Lata e Copo Estilo Cilindro NOS Nitro com Válvulas e Logotipo em Relevo",
@@ -1288,7 +1218,7 @@ const PRODUCTS_DATA = [
     ]
   },
   {
-    "id": "boneco-rennan-paraquedista",
+    "id": "boneco-personalizado-mascote-3d",
     "name": "Boneco Personalizado 3D (Sua Marca / Seu Personagem)",
     "subtitle": "Escultura Modular Multipeças com Pose Dinâmica e Base Nuvem",
     "category": "colecionaveis",
@@ -1339,19 +1269,19 @@ const PRODUCTS_DATA = [
       "Produção rápida para eventos corporativos"
     ],
     "images": [
-      "assets/images/prod_boneco-rennan-paraquedista_1_front.jpg",
-      "assets/images/prod_boneco-rennan-paraquedista_2_hero.jpg",
-      "assets/images/prod_boneco-rennan-paraquedista_3_side.jpg",
-      "assets/images/prod_boneco-rennan-paraquedista_4_detail.jpg"
+      "assets/images/prod_boneco-personalizado-mascote-3d_1_front.jpg",
+      "assets/images/prod_boneco-personalizado-mascote-3d_2_hero.jpg",
+      "assets/images/prod_boneco-personalizado-mascote-3d_3_side.jpg",
+      "assets/images/prod_boneco-personalizado-mascote-3d_4_detail.jpg"
     ],
     "gallery": [
-      "assets/images/prod_boneco-rennan-paraquedista_1_front.jpg",
-      "assets/images/prod_boneco-rennan-paraquedista_2_hero.jpg",
-      "assets/images/prod_boneco-rennan-paraquedista_3_side.jpg",
-      "assets/images/prod_boneco-rennan-paraquedista_4_detail.jpg"
+      "assets/images/prod_boneco-personalizado-mascote-3d_1_front.jpg",
+      "assets/images/prod_boneco-personalizado-mascote-3d_2_hero.jpg",
+      "assets/images/prod_boneco-personalizado-mascote-3d_3_side.jpg",
+      "assets/images/prod_boneco-personalizado-mascote-3d_4_detail.jpg"
     ],
-    "image": "assets/images/prod_boneco-rennan-paraquedista_1_front.jpg",
-    "mainImage": "assets/images/prod_boneco-rennan-paraquedista_1_front.jpg",
+    "image": "assets/images/prod_boneco-personalizado-mascote-3d_1_front.jpg",
+    "mainImage": "assets/images/prod_boneco-personalizado-mascote-3d_1_front.jpg",
     "imageLabels": [
       "Vista Frontal (Front)",
       "Perspectiva 3/4 (Hero)",
