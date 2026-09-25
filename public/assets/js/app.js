@@ -14,7 +14,8 @@ const AppState = {
   searchQuery: "",
   sortBy: "popular",
   showOnlyFavorites: false,
-  selectedProduct: null
+  selectedProduct: null,
+  modalImageIndex: 0
 };
 
 // Gerenciador de Favoritos (Wishlist)
@@ -230,8 +231,68 @@ function formatBRL(value) {
   return value.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 }
 
+// Efeito de Flocos de Neve Natalina Suave e Ultra-Leve (Canvas 60fps)
+function initSnowfall() {
+  const canvas = document.getElementById("snowfall-canvas");
+  if (!canvas) return;
+  const ctx = canvas.getContext("2d");
+  if (!ctx) return;
+
+  let width = (canvas.width = window.innerWidth);
+  let height = (canvas.height = window.innerHeight);
+
+  window.addEventListener("resize", () => {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+  }, { passive: true });
+
+  const numFlakes = Math.min(45, Math.floor(width / 32));
+  const flakes = [];
+
+  for (let i = 0; i < numFlakes; i++) {
+    flakes.push({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      r: Math.random() * 2.2 + 1.2,
+      d: Math.random() * numFlakes,
+      vy: Math.random() * 0.8 + 0.5,
+      vx: (Math.random() - 0.5) * 0.4,
+      opacity: Math.random() * 0.55 + 0.35
+    });
+  }
+
+  let angle = 0;
+  function renderSnow() {
+    ctx.clearRect(0, 0, width, height);
+    angle += 0.01;
+
+    for (let i = 0; i < flakes.length; i++) {
+      const f = flakes[i];
+      f.y += f.vy;
+      f.x += Math.sin(angle + f.d) * 0.4 + f.vx;
+
+      if (f.y > height) {
+        f.y = -8;
+        f.x = Math.random() * width;
+      }
+      if (f.x > width + 10) f.x = -8;
+      if (f.x < -10) f.x = width + 8;
+
+      ctx.beginPath();
+      ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2, false);
+      ctx.fillStyle = `rgba(255, 255, 255, ${f.opacity})`;
+      ctx.fill();
+    }
+
+    requestAnimationFrame(renderSnow);
+  }
+
+  requestAnimationFrame(renderSnow);
+}
+
 // Inicialização Geral da Aplicação
 document.addEventListener("DOMContentLoaded", () => {
+  initSnowfall();
   initNavbarCategories();
   initCategoryPills();
   renderProducts();
@@ -749,12 +810,85 @@ window.openProductDetails = function(productId) {
   const modal = document.getElementById("details-modal");
   if (!modal) return;
 
-  // Preenchimento de dados
+  // Galeria de 4 fotos em Fundo Branco Puro (#FFFFFF)
+  const images = (prod.images && prod.images.length > 0) ? prod.images : [prod.mainImage || prod.image];
+  const labels = prod.imageLabels || [
+    "Vista Frontal (Front)",
+    "Perspectiva 3/4 (Hero)",
+    "Vista Lateral (Side)",
+    "Detalhe 3D / Macro (0.12mm)"
+  ];
+  AppState.modalImageIndex = 0;
+
   const imgEl = document.getElementById("modal-img");
-  if (imgEl) {
-    imgEl.src = prod.mainImage;
-    imgEl.onerror = function() { this.src = "assets/images/IMR_LOGO_TRANSPARENTE.png"; };
+  const badgeEl = document.getElementById("modal-view-badge");
+
+  function updateModalImage(idx) {
+    if (idx < 0) idx = images.length - 1;
+    if (idx >= images.length) idx = 0;
+    AppState.modalImageIndex = idx;
+
+    if (imgEl) {
+      imgEl.src = images[idx];
+      imgEl.onerror = function() { this.src = "assets/images/IMR_LOGO_TRANSPARENTE.png"; };
+    }
+
+    if (badgeEl) {
+      const lbl = labels[idx] || `FOTO ${idx + 1}`;
+      badgeEl.textContent = `${idx + 1}/${images.length} • ${lbl.toUpperCase()}`;
+    }
+
+    const thumbs = document.querySelectorAll(".modal-thumb-btn");
+    thumbs.forEach((th, i) => {
+      if (i === idx) {
+        th.classList.add("active");
+      } else {
+        th.classList.remove("active");
+      }
+    });
   }
+
+  // Preenchimento das Miniaturas das 4 Posições
+  const thumbsContainer = document.getElementById("modal-thumbnails-container");
+  if (thumbsContainer) {
+    thumbsContainer.innerHTML = images.map((imgSrc, i) => {
+      const lbl = labels[i] || `Posição ${i + 1}`;
+      const shortLbl = lbl.split(" ")[0];
+      return `
+        <button 
+          type="button" 
+          class="modal-thumb-btn ${i === 0 ? 'active' : ''}" 
+          onclick="window.selectModalImage(${i})"
+          title="${lbl}"
+        >
+          <img src="${imgSrc}" alt="${lbl}" onerror="this.src='assets/images/IMR_LOGO_TRANSPARENTE.png'" />
+          <span class="modal-thumb-caption">${shortLbl}</span>
+        </button>
+      `;
+    }).join("");
+  }
+
+  window.selectModalImage = function(idx) {
+    updateModalImage(idx);
+  };
+
+  const prevBtn = document.getElementById("modal-prev-img");
+  if (prevBtn) {
+    prevBtn.onclick = function(e) {
+      e.stopPropagation();
+      updateModalImage(AppState.modalImageIndex - 1);
+    };
+  }
+
+  const nextBtn = document.getElementById("modal-next-img");
+  if (nextBtn) {
+    nextBtn.onclick = function(e) {
+      e.stopPropagation();
+      updateModalImage(AppState.modalImageIndex + 1);
+    };
+  }
+
+  updateModalImage(0);
 
   const titleEl = document.getElementById("modal-title");
   const subEl = document.getElementById("modal-subtitle");
@@ -839,6 +973,16 @@ function setupModalEvents() {
       closeDetailsModal();
       closeCartDrawer();
       closeMobileMenu();
+    }
+    const modal = document.getElementById("details-modal");
+    if (modal && modal.classList.contains("open")) {
+      if (e.key === "ArrowLeft") {
+        const prevBtn = document.getElementById("modal-prev-img");
+        if (prevBtn) prevBtn.click();
+      } else if (e.key === "ArrowRight") {
+        const nextBtn = document.getElementById("modal-next-img");
+        if (nextBtn) nextBtn.click();
+      }
     }
   });
 }

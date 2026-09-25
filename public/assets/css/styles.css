@@ -1741,3 +1741,242 @@ button, input, select {
     width: 100%;
   }
 }
+
+/* =============================================================================
+   12. ESPECIAL DE NATAL 2026 & GALERIA 4 POSIÇÕES FUNDO BRANCO PURO (#FFFFFF)
+   ============================================================================= */
+
+/* Canvas de Flocos de Neve Suaves */
+.snowfall-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 99999;
+}
+
+/* Barra Superior de Natal */
+.ticker-badge-natal {
+  background: linear-gradient(135deg, #c41e3a 0%, #165b33 100%) !important;
+  color: #ffffff !important;
+  padding: 3px 9px !important;
+  border-radius: var(--radius-subtle) !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.06em !important;
+  box-shadow: 0 0 10px rgba(196, 30, 58, 0.4) !important;
+}
+.ticker-natal-text {
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+}
+
+/* Pílula Especial de Natal 3D no Filtro de Categorias */
+.category-pill[data-category-id="natal"] {
+  background: #111111;
+  color: #ffffff;
+  border: 1.5px solid #c41e3a;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(196, 30, 58, 0.25);
+  font-weight: 900;
+}
+.category-pill[data-category-id="natal"]:hover {
+  background: #1c1c1c;
+  border-color: #e52b50;
+  box-shadow: 0 4px 14px rgba(196, 30, 58, 0.4);
+}
+.category-pill[data-category-id="natal"].active {
+  background: #c41e3a !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+  box-shadow: 0 4px 16px rgba(196, 30, 58, 0.5);
+}
+.category-pill[data-category-id="natal"] .pill-count {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+/* Destaque Natalino nos Badges do Hero */
+.hero-badge-natal {
+  background: linear-gradient(135deg, #c41e3a, #165b33) !important;
+  color: #ffffff !important;
+  font-weight: 900 !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  box-shadow: 0 0 12px rgba(196, 30, 58, 0.35);
+}
+
+/* Miniaturas no Card do Produto */
+.puma-card-thumbnails {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 6px 10px;
+  background: #ffffff;
+  border-top: 1px solid var(--puma-gray-border-subtle);
+}
+.card-thumb-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-subtle);
+  border: 1.5px solid var(--puma-gray-border);
+  background: #ffffff;
+  padding: 1px;
+  cursor: pointer;
+  transition: all var(--trans-fast);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-thumb-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.card-thumb-btn:hover {
+  border-color: #444444;
+}
+.card-thumb-btn.active {
+  border-color: #000000;
+  box-shadow: 0 0 0 1px #000000;
+}
+
+/* Badge de 4 Fotos 360 no Card */
+.puma-card-360-badge {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.85);
+  color: #ffffff;
+  font-family: var(--font-condensed);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  padding: 3px 7px;
+  border-radius: var(--radius-subtle);
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Badge de Posição no Modal */
+.modal-main-img-box {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid var(--puma-gray-border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  min-height: 380px;
+}
+.modal-view-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #000000;
+  color: #ffffff;
+  font-family: var(--font-condensed);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  padding: 4px 10px;
+  border-radius: var(--radius-subtle);
+  z-index: 3;
+}
+.modal-nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1.5px solid var(--puma-gray-border);
+  color: #000000;
+  font-size: 1.5rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: var(--radius-subtle);
+  transition: all var(--trans-fast);
+  z-index: 3;
+}
+.modal-nav-arrow:hover {
+  background: #000000;
+  color: #ffffff;
+  border-color: #000000;
+}
+.modal-prev-btn { left: 10px; }
+.modal-next-btn { right: 10px; }
+
+/* Wrapper da Galeria de Miniaturas no Modal */
+.modal-thumbnails-wrapper {
+  margin: 12px 0 16px;
+  background: #ffffff;
+  padding: 12px;
+  border: 1px solid var(--puma-gray-border-subtle);
+}
+.modal-thumbnails-label {
+  font-family: var(--font-condensed);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: #555555;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.modal-thumbnails-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+.modal-thumb-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: #ffffff;
+  border: 2px solid var(--puma-gray-border);
+  border-radius: var(--radius-subtle);
+  padding: 6px 4px;
+  cursor: pointer;
+  transition: all var(--trans-fast);
+}
+.modal-thumb-btn:hover {
+  border-color: #777777;
+  transform: translateY(-2px);
+}
+.modal-thumb-btn.active {
+  border-color: #000000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  background: #fbfbfb;
+}
+.modal-thumb-img {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  background: #ffffff;
+}
+.modal-thumb-label {
+  font-family: var(--font-condensed);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #333333;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+.modal-thumb-btn.active .modal-thumb-label {
+  color: #000000;
+  font-weight: 900;
+}
+

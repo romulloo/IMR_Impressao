@@ -29,19 +29,22 @@
 </head>
 <body>
 
-  <!-- 1. Top Announcement Bar (Estilo Puma Ticker) -->
-  <aside class="top-ticker" aria-label="Informações de Atendimento">
+  <!-- Efeito de Neve Natalina Suave IMR -->
+  <canvas id="snowfall-canvas" class="snowfall-canvas" aria-hidden="true"></canvas>
+
+  <!-- 1. Top Announcement Bar - Especial de Natal IMR -->
+  <aside class="top-ticker" aria-label="Informações de Atendimento e Especial de Natal">
     <div class="container">
       <div class="ticker-inner">
         <div class="ticker-content">
-          <span class="ticker-badge">FÁBRICA ATIVA</span>
-          <span>BAMBU LAB A1 MULTI-CORES • CAMADA 0.12MM • CURITIBA - PR • ENVIO BRASIL</span>
+          <span class="ticker-badge ticker-badge-natal">🎄 ESPECIAL DE NATAL</span>
+          <span class="ticker-natal-text">IMR IMPRESSÃO 3D • PRESENTES ÚNICOS &amp; PERSONALIZADOS • ATACADO B2B COM ATÉ 40% OFF</span>
         </div>
         <div class="ticker-links">
           <a href="https://instagram.com/imr_impressao" target="_blank" rel="noopener">
             @IMR_IMPRESSAO
           </a>
-          <a href="https://wa.me/5541987698054?text=Ol%C3%A1%20IMR%20Impress%C3%A3o!%20Gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener">
+          <a href="https://wa.me/5541987698054?text=Ol%C3%A1%20IMR%20Impress%C3%A3o!%20Gostaria%20de%20um%20or%C3%A7amento%20do%20Especial%20de%20Natal." target="_blank" rel="noopener">
             WHATSAPP: (41) 98769-8054
           </a>
         </div>
@@ -183,31 +186,33 @@
       <div class="container">
         <div class="hero-puma-content">
           <!-- Subtítulo / Tagline superior Puma -->
-          <span class="hero-puma-tagline">✦ MANUFATURA DIGITAL DE ALTA PRECISÃO</span>
+          <span class="hero-puma-tagline">🎄 EDIÇÃO ESPECIAL DE NATAL 2026 • MANUFATURA DIGITAL DE ALTA PRECISÃO</span>
           
           <!-- Título Principal de Impacto em Caixa Alta Condensada -->
           <h1 class="hero-puma-title">CATÁLOGO IMR IMPRESSÃO 3D</h1>
           
           <!-- Descrição Refinada -->
           <p class="hero-puma-desc">
-            Action figures hiperdetalhadas, bonecos personalizados sob encomenda, displays de balcão e chaveiros corporativos produzidos em escala com fusão multi-cores direta sem pintura manual.
+            Presentes únicos de Natal, escudo do Vasco com pedestal, linha gamer Athletico, figuras colecionáveis, produtos para bancada e mulher, copos temáticos 3D e brinquedos articulados infantis. Todos os produtos com fundo branco puro (#FFFFFF) e galeria de 4 fotos em posições 360° em camadas ultra-finas de 0.12mm na Bambu Lab A1.
           </p>
 
           <!-- Badges de Diferenciais -->
           <div class="hero-puma-badges">
-            <span>BAMBU LAB MULTI-CORES</span>
+            <span class="hero-badge-natal">🎄 NATAL 3D ATÉ 40% OFF</span>
+            <span>4 FOTOS EM 360°</span>
+            <span>FUNDO 100% BRANCO (#FFFFFF)</span>
+            <span>BAMBU LAB A1 MULTI-CORES</span>
             <span>CAMADA ULTRA-FINA 0.12MM</span>
-            <span>ATÉ 75% OFF NO ATACADO</span>
             <span>ENVIO DIRETO DE CURITIBA</span>
           </div>
 
           <!-- Botões de Ação Quadrados/Retangulares Clássicos da Puma -->
           <div class="hero-puma-actions">
             <a href="#catalogo" class="puma-btn-primary">
-              SOLICITAR ORÇAMENTO
+              VER CATÁLOGO &amp; NATAL 3D
             </a>
             <a 
-              href="https://wa.me/5541987698054?text=Ol%C3%A1%20IMR%20Impress%C3%A3o!%20Gostaria%20de%20receber%20uma%20cota%C3%A7%C3%A3o%20r%C3%A1pida%20de%20produtos%20do%20cat%C3%A1logo." 
+              href="https://wa.me/5541987698054?text=Ol%C3%A1%20IMR%20Impress%C3%A3o!%20Gostaria%20de%20receber%20uma%20cota%C3%A7%C3%A3o%20do%20Especial%20de%20Natal%20e%20produtos%20do%20cat%C3%A1logo." 
               target="_blank" 
               rel="noopener" 
               class="puma-btn-secondary"
@@ -225,8 +230,8 @@
         
         <!-- Cabeçalho da Seção -->
         <div class="catalog-section-header">
-          <h2 class="catalog-title">DESTAQUES & LANÇAMENTOS 2026</h2>
-          <p class="catalog-subtitle">SELECIONE UMA CATEGORIA OU BUSQUE POR SOLUÇÕES EM IMPRESSÃO 3D</p>
+          <h2 class="catalog-title">DESTAQUES &amp; LANÇAMENTOS 2026 • ESPECIAL DE NATAL</h2>
+          <p class="catalog-subtitle">TODOS OS PRODUTOS COM FUNDO BRANCO PURO (#FFFFFF) E 4 FOTOS EM POSIÇÕES DIFERENTES (FRONTAL, HERO 3/4, LATERAL, DETALHE)</p>
         </div>
 
         <!-- Controles: Pílulas de Categoria + Barra de Busca e Ordenação -->
@@ -343,7 +348,20 @@
         <!-- Coluna Esquerda: Imagem & Ficha Técnica -->
         <div>
           <div class="modal-main-img-box">
+            <span class="modal-view-badge" id="modal-view-badge">1/4 • VISTA FRONTAL</span>
             <img id="modal-img" src="" alt="Produto IMR" />
+            <button type="button" class="modal-nav-arrow modal-prev-btn" id="modal-prev-img" aria-label="Foto Anterior">‹</button>
+            <button type="button" class="modal-nav-arrow modal-next-btn" id="modal-next-img" aria-label="Próxima Foto">›</button>
+          </div>
+
+          <!-- MINIATURAS DAS 4 FOTOS COM FUNDO BRANCO PURO -->
+          <div class="modal-thumbnails-wrapper">
+            <div class="modal-thumbnails-label">
+              <span>GALERIA 4 POSIÇÕES • FUNDO 100% BRANCO (#FFFFFF):</span>
+            </div>
+            <div class="modal-thumbnails-grid" id="modal-thumbnails-container">
+              <!-- Inserido dinamicamente via app.js -->
+            </div>
           </div>
 
           <div class="specs-table">
