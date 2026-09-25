@@ -861,17 +861,19 @@ const PRODUCTS_DATA = [
   },
   {
     "id": "porta-chaves-celta-2002",
-    "name": "Porta-Chaves de Parede Traseira GM Celta 2002 3D",
-    "subtitle": "Réplica Fiel em Escala com Lanternas Bicolor, Letreiros Celta e 4 Ganchos de Aço",
+    "name": "Porta-Chaves Traseira do Seu Carro Personalizado 3D (Celta, BMW, Jetta, Golf e Mais)",
+    "subtitle": "Traseira Esculpida em 3D Multicor com a Placa e o Modelo do Seu Veículo + 4 Ganchos",
     "category": "utilidades",
     "categoryName": "Copos & Utilidades",
     "pumaCategory": "utilidades",
     "pumaCategoryLabel": "UTILIDADES • LINHA AUTOMOTIVA",
-    "badge": "✦ LANÇAMENTO AUTOMOTIVO",
-    "basePrice": 170.0,
-    "wholesalePrice": 102.0,
-    "wholesaleMinQty": 30,
-    "wholesaleLabel": "R$ 102,00 un (a partir de 30 un)",
+    "badge": "✦ SEU CARRO PERSONALIZADO",
+    "isCustomizable": true,
+    "customTag": "TRAGA O SEU CARRO",
+    "basePrice": 240.0,
+    "wholesalePrice": 144.0,
+    "wholesaleMinQty": 15,
+    "wholesaleLabel": "R$ 144,00 un (a partir de 15 un)",
     "wholesaleDiscountPercent": "40% OFF",
     "materialDisplay": "PLA Tough Prata Metálico, Preto Fosco & Vermelho Freio",
     "materials": [
@@ -885,29 +887,29 @@ const PRODUCTS_DATA = [
     "discountTiers": [
       {
         "min": 1,
-        "label": "1 a 9 un",
-        "price": 170.0,
+        "label": "1 a 4 un",
+        "price": 240.0,
         "discount": "Preço Padrão"
       },
       {
-        "min": 10,
-        "label": "10 a 29 un",
-        "price": 127.5,
-        "discount": "25% OFF"
+        "min": 5,
+        "label": "5 a 14 un",
+        "price": 189.0,
+        "discount": "21% OFF"
       },
       {
-        "min": 30,
-        "label": "30+ un (Atacado)",
-        "price": 102.0,
+        "min": 15,
+        "label": "15+ un (Atacado)",
+        "price": 144.0,
         "discount": "40% OFF"
       }
     ],
-    "description": "Porta-chaves de parede escultural reproduzindo nos mínimos detalhes a traseira nostálgica do GM Celta 2002. Possui lanternas bicolores vermelhas e âmbar, placa em baixo relevo, vidro traseiro em preto piano e 4 ganchos resistentes.",
+    "description": "Porta-chaves de parede escultural reproduzindo a traseira do seu carro favorito ou do seu próprio veículo (Celta, BMW, Jetta, Golf, Porsche e outros). Possui lanternas bicolores, placa personalizada em relevo com o seu nome ou placa real, e 4 ganchos de alta resistência.",
     "b2bBenefits": [
       "Produto viral entre entusiastas automotivos, mecânicas, auto centers e fãs de carros clássicos",
       "Fixação ultra-simples por fita dupla face de alta aderência ou parafusos ocultos",
       "Suporta múltiplos molhos de chaves pesados sem envergar",
-      "Excelente brinde para concessionárias e lojas de autopeças"
+      "Excelente presente de alto luxo para apaixonados por carros"
     ],
     "images": [
       "assets/images/prod_porta-chaves-celta-2002_1_front.jpg",
@@ -926,6 +928,154 @@ const PRODUCTS_DATA = [
     "imageLabels": [
       "Vista Frontal (Front)",
       "Perspectiva 3/4 (Hero)",
+      "Vista Lateral (Side)",
+      "Detalhe 3D / Macro (0.12mm)"
+    ]
+  },
+  {
+    "id": "porta-chaves-porsche-gt3-rs",
+    "name": "Porta-Chaves Traseira Porsche 911 GT3 RS 3D",
+    "subtitle": "Réplica Escultural com Aerofólio Traseiro, Duplo Escape Central, Difusor e Placa GT3 RS",
+    "category": "utilidades",
+    "categoryName": "Copos & Utilidades",
+    "pumaCategory": "utilidades",
+    "pumaCategoryLabel": "UTILIDADES • SUPERESPORTIVOS",
+    "badge": "✦ SUPERESPORTIVO 3D",
+    "isCustomizable": true,
+    "customTag": "PLACA PERSONALIZADA",
+    "basePrice": 240.0,
+    "wholesalePrice": 144.0,
+    "wholesaleMinQty": 15,
+    "wholesaleLabel": "R$ 144,00 un (a partir de 15 un)",
+    "wholesaleDiscountPercent": "40% OFF",
+    "materialDisplay": "PLA Tough Cinza Giz, Preto Piano & Vermelho Guards",
+    "materials": [
+      "PLA Tough de Alta Densidade",
+      "Aerofólio Aerodinâmico e Difusor Traseiro",
+      "5 Ganchos Reforçados Embutidos",
+      "Fixação de Parede Oculta"
+    ],
+    "leadTime": "2 a 4 dias úteis",
+    "dimensions": "22,0cm (L) × 14,0cm (A) × 6,5cm (P)",
+    "weight": "240g",
+    "discountTiers": [
+      {
+        "min": 1,
+        "label": "1 a 4 un",
+        "price": 240.0,
+        "discount": "Preço Padrão"
+      },
+      {
+        "min": 5,
+        "label": "5 a 14 un",
+        "price": 189.0,
+        "discount": "21% OFF"
+      },
+      {
+        "min": 15,
+        "label": "15+ un (Atacado)",
+        "price": 144.0,
+        "discount": "40% OFF"
+      }
+    ],
+    "description": "Porta-chaves de parede escultural do icônico Porsche 911 GT3 RS. Detalhamento minucioso do aerofólio suspenso, barra de LED traseira vermelha contínua, saídas duplas de escapamento central e placa personalizável com o seu nome ou dados do seu carro.",
+    "b2bBenefits": [
+      "Objeto de desejo para apaixonados por Porsche, track days e supercarros",
+      "Aerofólio robusto e ganchos que suportam múltiplos molhos pesados",
+      "Personalização com o modelo ou nome do cliente na placa",
+      "Acabamento de alto luxo para garagens, escritórios e salas de estar"
+    ],
+    "images": [
+      "assets/images/prod_porta-chaves-porsche-gt3-rs_1_front.jpg",
+      "assets/images/prod_porta-chaves-porsche-gt3-rs_2_hero.jpg",
+      "assets/images/prod_porta-chaves-porsche-gt3-rs_3_side.jpg",
+      "assets/images/prod_porta-chaves-porsche-gt3-rs_4_detail.jpg"
+    ],
+    "gallery": [
+      "assets/images/prod_porta-chaves-porsche-gt3-rs_1_front.jpg",
+      "assets/images/prod_porta-chaves-porsche-gt3-rs_2_hero.jpg",
+      "assets/images/prod_porta-chaves-porsche-gt3-rs_3_side.jpg",
+      "assets/images/prod_porta-chaves-porsche-gt3-rs_4_detail.jpg"
+    ],
+    "image": "assets/images/prod_porta-chaves-porsche-gt3-rs_1_front.jpg",
+    "mainImage": "assets/images/prod_porta-chaves-porsche-gt3-rs_1_front.jpg",
+    "imageLabels": [
+      "Vista Frontal (Front)",
+      "Perspectiva 3/4 (Hero)",
+      "Vista Lateral (Side)",
+      "Detalhe 3D / Macro (0.12mm)"
+    ]
+  },
+  {
+    "id": "porta-chaves-gol-gti-quadrado",
+    "name": "Porta-Chaves de Parede Gol GTi Quadrado 3D (Porta-Malas Abre)",
+    "subtitle": "Ícone Nacional dos Anos 90 com Tampa Traseira Articulada Funcional e Ganchos Reforçados",
+    "category": "utilidades",
+    "categoryName": "Copos & Utilidades",
+    "pumaCategory": "utilidades",
+    "pumaCategoryLabel": "UTILIDADES • CLÁSSICOS NACIONAIS",
+    "badge": "✦ PORTA-MALAS QUE ABRE",
+    "isCustomizable": true,
+    "customTag": "PLACA PERSONALIZADA",
+    "basePrice": 240.0,
+    "wholesalePrice": 144.0,
+    "wholesaleMinQty": 15,
+    "wholesaleLabel": "R$ 144,00 un (a partir de 15 un)",
+    "wholesaleDiscountPercent": "40% OFF",
+    "materialDisplay": "PLA Tough Vermelho Royale, Cinza Chumbo & Preto Fosco",
+    "materials": [
+      "PLA Tough Resistente a Impactos",
+      "Porta-Malas Funcional com Dobradiça 3D",
+      "5 Ganchos Resistentes para Molhos de Chaves",
+      "Fixação de Parede Inclusa"
+    ],
+    "leadTime": "2 a 4 dias úteis",
+    "dimensions": "21,0cm (L) × 12,0cm (A) × 6,0cm (P)",
+    "weight": "250g",
+    "discountTiers": [
+      {
+        "min": 1,
+        "label": "1 a 4 un",
+        "price": 240.0,
+        "discount": "Preço Padrão"
+      },
+      {
+        "min": 5,
+        "label": "5 a 14 un",
+        "price": 189.0,
+        "discount": "21% OFF"
+      },
+      {
+        "min": 15,
+        "label": "15+ un (Atacado)",
+        "price": 144.0,
+        "discount": "40% OFF"
+      }
+    ],
+    "description": "Porta-chaves de parede exclusivo inspirado no lendário Gol GTi 'Quadrado'. Além dos ganchos para pendurar chaves, possui porta-malas funcional que abre de verdade para guardar pequenos objetos, cartões e chaves secretas. Detalhes clássicos das lanternas fumê e aerofólio GTi.",
+    "b2bBenefits": [
+      "Sucesso absoluto entre colecionadores de clássicos automotivos brasileiros",
+      "Mecanismo articulado inovador que impressiona qualquer visitante",
+      "Ganchos reforçados e compartimento secreto no porta-malas",
+      "Margem superior e alto valor percebido de presente de luxo"
+    ],
+    "images": [
+      "assets/images/prod_porta-chaves-gol-gti-quadrado_1_front.jpg",
+      "assets/images/prod_porta-chaves-gol-gti-quadrado_2_hero.jpg",
+      "assets/images/prod_porta-chaves-gol-gti-quadrado_3_side.jpg",
+      "assets/images/prod_porta-chaves-gol-gti-quadrado_4_detail.jpg"
+    ],
+    "gallery": [
+      "assets/images/prod_porta-chaves-gol-gti-quadrado_1_front.jpg",
+      "assets/images/prod_porta-chaves-gol-gti-quadrado_2_hero.jpg",
+      "assets/images/prod_porta-chaves-gol-gti-quadrado_3_side.jpg",
+      "assets/images/prod_porta-chaves-gol-gti-quadrado_4_detail.jpg"
+    ],
+    "image": "assets/images/prod_porta-chaves-gol-gti-quadrado_1_front.jpg",
+    "mainImage": "assets/images/prod_porta-chaves-gol-gti-quadrado_1_front.jpg",
+    "imageLabels": [
+      "Vista Frontal (Front)",
+      "Perspectiva Aberta (Hero)",
       "Vista Lateral (Side)",
       "Detalhe 3D / Macro (0.12mm)"
     ]
@@ -1811,11 +1961,11 @@ const PRODUCTS_DATA = [
     "badge": "✦ SUA MARCA AQUI",
     "isCustomizable": true,
     "customTag": "SUA MARCA AQUI",
-    "basePrice": 79.0,
-    "wholesalePrice": 39.5,
+    "basePrice": 30.0,
+    "wholesalePrice": 18.0,
     "wholesaleMinQty": 30,
-    "wholesaleLabel": "R$ 39,50 un (a partir de 30 un)",
-    "wholesaleDiscountPercent": "50% OFF",
+    "wholesaleLabel": "R$ 18,00 un (a partir de 30 un)",
+    "wholesaleDiscountPercent": "40% OFF",
     "materialDisplay": "TPU Flexível 95A + PLA Tough Híbrido",
     "materials": [
       "TPU Flexível de Alta Densidade",
@@ -1828,20 +1978,20 @@ const PRODUCTS_DATA = [
       {
         "min": 1,
         "label": "1 a 9 un",
-        "price": 79.0,
+        "price": 30.0,
         "discount": "Preço Padrão"
       },
       {
         "min": 10,
         "label": "10 a 29 un",
-        "price": 55.3,
-        "discount": "30% OFF"
+        "price": 24.0,
+        "discount": "20% OFF"
       },
       {
         "min": 30,
         "label": "30+ un (Atacado)",
-        "price": 39.5,
-        "discount": "50% OFF"
+        "price": 18.0,
+        "discount": "40% OFF"
       }
     ],
     "description": "Capa protetora de celular de absorção de impacto com padrão colmeia ventilado. Integra anel magnético de neodímio N52 para compatibilidade com carregadores e suportes veiculares MagSafe.",
@@ -2100,11 +2250,11 @@ const PRODUCTS_DATA = [
     "badge": "✦ SUA MARCA AQUI",
     "isCustomizable": true,
     "customTag": "SUA MARCA AQUI",
-    "basePrice": 39.0,
-    "wholesalePrice": 19.5,
+    "basePrice": 30.0,
+    "wholesalePrice": 18.0,
     "wholesaleMinQty": 30,
-    "wholesaleLabel": "R$ 19,50 un (a partir de 30 un)",
-    "wholesaleDiscountPercent": "50% OFF",
+    "wholesaleLabel": "R$ 18,00 un (a partir de 30 un)",
+    "wholesaleDiscountPercent": "40% OFF",
     "materialDisplay": "PLA Tough Bicolor Preto & Branco com Base Antiderrapante",
     "materials": [
       "PLA Tough de Alta Densidade",
@@ -2117,20 +2267,20 @@ const PRODUCTS_DATA = [
       {
         "min": 1,
         "label": "1 a 9 un",
-        "price": 39.0,
+        "price": 30.0,
         "discount": "Preço Padrão"
       },
       {
         "min": 10,
         "label": "10 a 29 un",
-        "price": 27.3,
-        "discount": "30% OFF"
+        "price": 24.0,
+        "discount": "20% OFF"
       },
       {
         "min": 30,
         "label": "30+ un (Atacado)",
-        "price": 19.5,
-        "discount": "50% OFF"
+        "price": 18.0,
+        "discount": "40% OFF"
       }
     ],
     "description": "Suporte de mesa ergonômico com design geométrico moderno para smartphones e tablets compactos. Mantém a tela no ângulo ideal de 65 graus para videochamadas, notificações e visualização sem cansar o pescoço. Canaleta integrada permite carregar o aparelho enquanto repousa no suporte.",
